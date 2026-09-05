@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Courier+Prime:wght@400&display=swap" rel="stylesheet" />
+<style>
+  html, body { margin: 0; padding: 0; background: #FBF7EA; }
+  * { box-sizing: border-box; }
+  a { color: #2C5B4E; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+  a:hover { color: #C4544D; }
+</style>
+</helmet>
+<div style="background:#FBF7EA;color:#1F2A24;font-family:'EB Garamond',Georgia,serif;font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased">
+
+  <header style="display:flex;flex-wrap:wrap;gap:20px;align-items:baseline;justify-content:space-between;padding:26px clamp(20px,5vw,64px);border-bottom:1px solid rgba(31,42,36,0.14)">
+    <a href="index.html" style="font-family:'Bodoni Moda',serif;font-size:24px;letter-spacing:0.02em;color:#1F2A24;text-decoration:none">chintz<span style="color:#C4544D">creative</span></a>
+    <nav style="display:flex;flex-wrap:wrap;gap:clamp(16px,2.5vw,34px);font-size:14px;letter-spacing:0.14em;text-transform:uppercase">
+      <a href="interior-design.html" style="text-decoration:none">Interiors</a>
+      <a href="watercolors.html" style="text-decoration:none">Watercolors</a>
+      <a href="weddings.html" style="text-decoration:none">Weddings</a>
+      <a href="#about" style="text-decoration:none">About</a>
+    </nav>
+  </header>
+
+  <section style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(28px,5vw,64px);align-items:center;padding:clamp(40px,7vw,96px) clamp(20px,5vw,64px)">
+    <div style="max-width:520px">
+      <p style="margin:0 0 22px;font-family:'Courier Prime',monospace;font-size:12px;letter-spacing:0.22em;text-transform:uppercase;color:#4E6B5A">Est. from a banned cloth</p>
+      <h1 style="margin:0;font-family:'Bodoni Moda',serif;font-weight:400;font-size:clamp(40px,6.5vw,76px);line-height:1.04;letter-spacing:-0.01em;text-wrap:pretty">Rooms, paper and weddings, made by hand.</h1>
+      <p style="margin:26px 0 0;font-size:clamp(18px,2vw,21px);max-width:44ch;text-wrap:pretty">Interior design, watercolor commissions and wedding decorating by Bailey. Pattern taken seriously, colour taken further.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:14px;margin-top:34px">
+        <a href="{{ instagramUrl }}" style="padding:13px 26px;background:#2C5B4E;color:#FBF7EA;text-decoration:none;font-size:14px;letter-spacing:0.14em;text-transform:uppercase" style-hover="background:#C4544D">Enquire on Instagram</a>
+        <a href="#work" style="padding:13px 26px;border:1px solid rgba(31,42,36,0.28);text-decoration:none;font-size:14px;letter-spacing:0.14em;text-transform:uppercase;color:#1F2A24" style-hover="border-color:#2C5B4E;color:#2C5B4E">See the work</a>
+      </div>
+    </div>
+    <div style="aspect-ratio:4/5;min-height:320px;display:flex;align-items:center;justify-content:center;padding:24px;text-align:center;border:1px solid rgba(31,42,36,0.16);background:repeating-linear-gradient(135deg,#F1E9D2 0 9px,#FBF7EA 9px 18px)">
+      <span style="font-family:'Courier Prime',monospace;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:#7A8A80;line-height:1.7">hero image<br />a finished room, or Bailey's<br />chintz wallpaper detail</span>
+    </div>
+  </section>
+
+  <section style="background:{{ manifestoGround }};color:#F4EFDD;padding:clamp(56px,9vw,120px) clamp(20px,5vw,64px)">
+    <p style="margin:0 0 44px;font-family:'Courier Prime',monospace;font-size:12px;letter-spacing:0.22em;text-transform:uppercase;color:#D6E3D5">On the word</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:clamp(32px,5vw,64px);max-width:1180px">
+      <div>
+        <p style="margin:0 0 14px;font-family:'Bodoni Moda',serif;font-size:15px;letter-spacing:0.2em;text-transform:uppercase;color:#E5A9A2">chīṁṭ</p>
+        <h2 style="margin:0 0 16px;font-family:'Bodoni Moda',serif;font-weight:400;font-size:clamp(26px,3vw,34px);line-height:1.2">Spotted, speckled, bright</h2>
+        <p style="margin:0;max-width:38ch;color:#E6E0CC;text-wrap:pretty">From the Hindi <i>chīṁṭ</i> — spotted or variegated — by way of the Sanskrit <i>chitra</i>, bright. It named the painted and mordant-dyed cottons of the Coromandel Coast, drawn by hand with a kalam pen, flower by flower.</p>
+      </div>
+      <div>
+        <p style="margin:0 0 14px;font-family:'Bodoni Moda',serif;font-size:15px;letter-spacing:0.2em;text-transform:uppercase;color:#E5A9A2">1686 · 1720</p>
+        <h2 style="margin:0 0 16px;font-family:'Bodoni Moda',serif;font-weight:400;font-size:clamp(26px,3vw,34px);line-height:1.2">Outlawed for being too good</h2>
+        <p style="margin:0;max-width:38ch;color:#E6E0CC;text-wrap:pretty">European mills could not match it. France banned chintz imports in 1686; in 1720 Parliament forbade its use in apparel or "in or about any Bed, Chair, Cushion or other Household furniture." Versailles wore it anyway.</p>
+      </div>
+      <div>
+        <p style="margin:0 0 14px;font-family:'Bodoni Moda',serif;font-size:15px;letter-spacing:0.2em;text-transform:uppercase;color:#E5A9A2">1851 —</p>
+        <h2 style="margin:0 0 16px;font-family:'Bodoni Moda',serif;font-weight:400;font-size:clamp(26px,3vw,34px);line-height:1.2">And then, cheap</h2>
+        <p style="margin:0;max-width:38ch;color:#E6E0CC;text-wrap:pretty">Roller printing made it ordinary, and by the middle of the nineteenth century "chintzy" had become an insult. The pattern never got worse. Only the making did. This studio takes the older meaning.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="work" style="padding:clamp(56px,9vw,110px) clamp(20px,5vw,64px)">
+    <div style="display:flex;flex-wrap:wrap;gap:20px;align-items:baseline;justify-content:space-between;border-bottom:1px solid rgba(31,42,36,0.14);padding-bottom:20px;margin-bottom:clamp(32px,5vw,56px)">
+      <h2 style="margin:0;font-family:'Bodoni Moda',serif;font-weight:400;font-size:clamp(30px,4vw,46px)">The practice</h2>
+      <p style="margin:0;font-family:'Courier Prime',monospace;font-size:12px;letter-spacing:0.2em;text-transform:uppercase;color:#4E6B5A">Three ways to work together</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:clamp(24px,3.5vw,44px)">
+      <a href="interior-design.html" style="text-decoration:none;color:#1F2A24;display:flex;flex-direction:column;gap:18px" style-hover="color:#C4544D">
+        <span style="aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;text-align:center;padding:20px;border:1px solid rgba(31,42,36,0.16);background:repeating-linear-gradient(135deg,#E7EFE6 0 9px,#FBF7EA 9px 18px);font-family:'Courier Prime',monospace;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:#7A8A80">interior project<br />photograph</span>
+        <span style="font-family:'Bodoni Moda',serif;font-size:26px">Interior design</span>
+        <span style="max-width:32ch;text-wrap:pretty">Whole rooms and single corners. Layered pattern, found furniture, colour chosen in the light it will live in.</span>
+      </a>
+      <a href="watercolors.html" style="text-decoration:none;color:#1F2A24;display:flex;flex-direction:column;gap:18px" style-hover="color:#C4544D">
+        <span style="aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;text-align:center;padding:20px;border:1px solid rgba(31,42,36,0.16);background:repeating-linear-gradient(135deg,#F6E2DE 0 9px,#FBF7EA 9px 18px);font-family:'Courier Prime',monospace;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:#8A7A78">watercolor<br />painting scan</span>
+        <span style="font-family:'Bodoni Moda',serif;font-size:26px">Watercolors</span>
+        <span style="max-width:32ch;text-wrap:pretty">Commissioned paintings on paper — houses, bouquets, venues, pattern studies. Framed or ready to frame.</span>
+      </a>
+      <a href="weddings.html" style="text-decoration:none;color:#1F2A24;display:flex;flex-direction:column;gap:18px" style-hover="color:#C4544D">
+        <span style="aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;text-align:center;padding:20px;border:1px solid rgba(31,42,36,0.16);background:repeating-linear-gradient(135deg,#F3EAD4 0 9px,#FBF7EA 9px 18px);font-family:'Courier Prime',monospace;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:#8A8272">wedding table<br />or banner detail</span>
+        <span style="font-family:'Bodoni Moda',serif;font-size:26px">Weddings</span>
+        <span style="max-width:32ch;text-wrap:pretty">Decorating, styling and hand-painted banners and signage, from the first sketch to the last table.</span>
+      </a>
+    </div>
+  </section>
+
+  <section id="about" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(32px,5vw,72px);align-items:start;padding:clamp(48px,8vw,110px) clamp(20px,5vw,64px);border-top:1px solid rgba(31,42,36,0.14)">
+    <div style="aspect-ratio:3/4;min-height:280px;display:flex;align-items:center;justify-content:center;text-align:center;padding:20px;border:1px solid rgba(31,42,36,0.16);background:repeating-linear-gradient(135deg,#F1E9D2 0 9px,#FBF7EA 9px 18px);font-family:'Courier Prime',monospace;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:#7A8A80">portrait of Bailey<br />at work</div>
+    <div style="max-width:560px">
+      <p style="margin:0 0 22px;font-family:'Courier Prime',monospace;font-size:12px;letter-spacing:0.22em;text-transform:uppercase;color:#4E6B5A">About</p>
+      <h2 style="margin:0 0 24px;font-family:'Bodoni Moda',serif;font-weight:400;font-size:clamp(28px,3.6vw,42px);line-height:1.15;text-wrap:pretty">Bailey works across rooms, paper and celebrations, and treats them as one practice.</h2>
+      <p style="margin:0 0 18px;text-wrap:pretty">A wedding needs the same eye as a sitting room: what the colour does at four in the afternoon, how much pattern a space can hold, where the hand shows. She paints the thing before she builds it, which is why so much of the work begins in watercolor.</p>
+      <p style="margin:0 0 30px;text-wrap:pretty">Commissions are taken a few at a time so each one gets the attention it needs.</p>
+      <p style="margin:0"><a href="{{ instagramUrl }}" style="font-family:'Bodoni Moda',serif;font-size:20px">Enquiries and current work live on Instagram &rarr;</a></p>
+      <sc-if value="{{ showAvailability }}" hint-placeholder-val="{{ true }}">
+        <p style="margin:24px 0 0;font-family:'Courier Prime',monospace;font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:#6B6353">Currently booking · send a note with dates and a few photographs</p>
+      </sc-if>
+    </div>
+  </section>
+
+  <footer style="background:#1F2A24;color:#CFCBB8;padding:clamp(36px,5vw,60px) clamp(20px,5vw,64px);display:flex;flex-wrap:wrap;gap:24px;align-items:flex-end;justify-content:space-between">
+    <div>
+      <p style="margin:0 0 8px;font-family:'Bodoni Moda',serif;font-size:22px;color:#FBF7EA">chintz<span style="color:#E08C80">creative</span></p>
+      <p style="margin:0;font-family:'Courier Prime',monospace;font-size:12px;letter-spacing:0.16em;text-transform:uppercase">Interiors · Watercolors · Weddings</p>
+    </div>
+    <nav style="display:flex;flex-wrap:wrap;gap:26px;font-size:14px;letter-spacing:0.12em;text-transform:uppercase">
+      <a href="interior-design.html" style="color:#CFCBB8;text-decoration:none" style-hover="color:#E08C80">Interiors</a>
+      <a href="watercolors.html" style="color:#CFCBB8;text-decoration:none" style-hover="color:#E08C80">Watercolors</a>
+      <a href="weddings.html" style="color:#CFCBB8;text-decoration:none" style-hover="color:#E08C80">Weddings</a>
+      <a href="{{ instagramUrl }}" style="color:#CFCBB8;text-decoration:none" style-hover="color:#E08C80">Instagram</a>
+    </nav>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;instagramHandle&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;chintzcreative&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Contact&quot;},&quot;manifestoGround&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#2C5B4E&quot;,&quot;options&quot;:[&quot;#2C5B4E&quot;,&quot;#1F2A24&quot;,&quot;#8A3A36&quot;,&quot;#AB937E&quot;],&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Style&quot;},&quot;showAvailability&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Contact&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const handle = (this.props.instagramHandle ?? "chintzcreative").replace(/^@/, "");
+    return {
+      instagramUrl: "https://instagram.com/" + handle,
+      manifestoGround: this.props.manifestoGround ?? "#2C5B4E",
+      showAvailability: this.props.showAvailability ?? true,
+    };
+  }
+}
+</script>
+</body>
+</html>
