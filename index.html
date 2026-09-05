@@ -8,124 +8,214 @@
 <body>
 <x-dc>
 <helmet>
-<link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
-<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Courier+Prime:wght@400&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Spectral:ital,wght@0,300;0,400;0,500;1,300;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
 <style>
-  html, body { margin: 0; padding: 0; background: #FBF7EA; }
+  :root {
+    --ground: #14241D; --ink: #F2EBDA; --accent: #E7B457; --accent2: #E9938A;
+    --muted: #A9BFAE; --rule: rgba(242,235,218,0.16); --rule2: rgba(242,235,218,0.3);
+    --tint: rgba(242,235,218,0.07); --onaccent: #14241D;
+  }
+  html, body { margin: 0; padding: 0; background: var(--ground); transition: background 300ms ease; }
   * { box-sizing: border-box; }
-  a { color: #2C5B4E; text-decoration-thickness: 1px; text-underline-offset: 3px; }
-  a:hover { color: #C4544D; }
+  a { color: var(--accent); text-underline-offset: 4px; }
+  a:hover { color: var(--accent2); }
+  ::selection { background: var(--accent2); color: var(--onaccent); }
+  input, select, textarea { font: inherit; }
+  input::placeholder, textarea::placeholder { color: var(--muted); opacity: 1; }
 </style>
 </helmet>
-<div style="background:#FBF7EA;color:#1F2A24;font-family:'EB Garamond',Georgia,serif;font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased">
+<div style="background:var(--ground);color:var(--ink);font-family:Spectral,Georgia,serif;font-weight:300;font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;display:flex;flex-wrap:wrap;align-items:flex-start;gap:0;transition:background 300ms ease,color 300ms ease">
 
-  <header style="display:flex;flex-wrap:wrap;gap:20px;align-items:baseline;justify-content:space-between;padding:26px clamp(20px,5vw,64px);border-bottom:1px solid rgba(31,42,36,0.14)">
-    <a href="index.html" style="font-family:'Bodoni Moda',serif;font-size:24px;letter-spacing:0.02em;color:#1F2A24;text-decoration:none">chintz<span style="color:#C4544D">creative</span></a>
-    <nav style="display:flex;flex-wrap:wrap;gap:clamp(16px,2.5vw,34px);font-size:14px;letter-spacing:0.14em;text-transform:uppercase">
-      <a href="interior-design.html" style="text-decoration:none">Interiors</a>
-      <a href="watercolors.html" style="text-decoration:none">Watercolors</a>
-      <a href="weddings.html" style="text-decoration:none">Weddings</a>
-      <a href="#about" style="text-decoration:none">About</a>
-    </nav>
-  </header>
-
-  <section style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(28px,5vw,64px);align-items:center;padding:clamp(40px,7vw,96px) clamp(20px,5vw,64px)">
-    <div style="max-width:520px">
-      <p style="margin:0 0 22px;font-family:'Courier Prime',monospace;font-size:12px;letter-spacing:0.22em;text-transform:uppercase;color:#4E6B5A">Est. from a banned cloth</p>
-      <h1 style="margin:0;font-family:'Bodoni Moda',serif;font-weight:400;font-size:clamp(40px,6.5vw,76px);line-height:1.04;letter-spacing:-0.01em;text-wrap:pretty">Rooms, paper and weddings, made by hand.</h1>
-      <p style="margin:26px 0 0;font-size:clamp(18px,2vw,21px);max-width:44ch;text-wrap:pretty">Interior design, watercolor commissions and wedding decorating by Bailey. Pattern taken seriously, colour taken further.</p>
-      <div style="display:flex;flex-wrap:wrap;gap:14px;margin-top:34px">
-        <a href="{{ instagramUrl }}" style="padding:13px 26px;background:#2C5B4E;color:#FBF7EA;text-decoration:none;font-size:14px;letter-spacing:0.14em;text-transform:uppercase" style-hover="background:#C4544D">Enquire on Instagram</a>
-        <a href="#work" style="padding:13px 26px;border:1px solid rgba(31,42,36,0.28);text-decoration:none;font-size:14px;letter-spacing:0.14em;text-transform:uppercase;color:#1F2A24" style-hover="border-color:#2C5B4E;color:#2C5B4E">See the work</a>
-      </div>
-    </div>
-    <div style="aspect-ratio:4/5;min-height:320px;display:flex;align-items:center;justify-content:center;padding:24px;text-align:center;border:1px solid rgba(31,42,36,0.16);background:repeating-linear-gradient(135deg,#F1E9D2 0 9px,#FBF7EA 9px 18px)">
-      <span style="font-family:'Courier Prime',monospace;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:#7A8A80;line-height:1.7">hero image<br />a finished room, or Bailey's<br />chintz wallpaper detail</span>
-    </div>
-  </section>
-
-  <section style="background:{{ manifestoGround }};color:#F4EFDD;padding:clamp(56px,9vw,120px) clamp(20px,5vw,64px)">
-    <p style="margin:0 0 44px;font-family:'Courier Prime',monospace;font-size:12px;letter-spacing:0.22em;text-transform:uppercase;color:#D6E3D5">On the word</p>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:clamp(32px,5vw,64px);max-width:1180px">
-      <div>
-        <p style="margin:0 0 14px;font-family:'Bodoni Moda',serif;font-size:15px;letter-spacing:0.2em;text-transform:uppercase;color:#E5A9A2">chīṁṭ</p>
-        <h2 style="margin:0 0 16px;font-family:'Bodoni Moda',serif;font-weight:400;font-size:clamp(26px,3vw,34px);line-height:1.2">Spotted, speckled, bright</h2>
-        <p style="margin:0;max-width:38ch;color:#E6E0CC;text-wrap:pretty">From the Hindi <i>chīṁṭ</i> — spotted or variegated — by way of the Sanskrit <i>chitra</i>, bright. It named the painted and mordant-dyed cottons of the Coromandel Coast, drawn by hand with a kalam pen, flower by flower.</p>
-      </div>
-      <div>
-        <p style="margin:0 0 14px;font-family:'Bodoni Moda',serif;font-size:15px;letter-spacing:0.2em;text-transform:uppercase;color:#E5A9A2">1686 · 1720</p>
-        <h2 style="margin:0 0 16px;font-family:'Bodoni Moda',serif;font-weight:400;font-size:clamp(26px,3vw,34px);line-height:1.2">Outlawed for being too good</h2>
-        <p style="margin:0;max-width:38ch;color:#E6E0CC;text-wrap:pretty">European mills could not match it. France banned chintz imports in 1686; in 1720 Parliament forbade its use in apparel or "in or about any Bed, Chair, Cushion or other Household furniture." Versailles wore it anyway.</p>
-      </div>
-      <div>
-        <p style="margin:0 0 14px;font-family:'Bodoni Moda',serif;font-size:15px;letter-spacing:0.2em;text-transform:uppercase;color:#E5A9A2">1851 —</p>
-        <h2 style="margin:0 0 16px;font-family:'Bodoni Moda',serif;font-weight:400;font-size:clamp(26px,3vw,34px);line-height:1.2">And then, cheap</h2>
-        <p style="margin:0;max-width:38ch;color:#E6E0CC;text-wrap:pretty">Roller printing made it ordinary, and by the middle of the nineteenth century "chintzy" had become an insult. The pattern never got worse. Only the making did. This studio takes the older meaning.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="work" style="padding:clamp(56px,9vw,110px) clamp(20px,5vw,64px)">
-    <div style="display:flex;flex-wrap:wrap;gap:20px;align-items:baseline;justify-content:space-between;border-bottom:1px solid rgba(31,42,36,0.14);padding-bottom:20px;margin-bottom:clamp(32px,5vw,56px)">
-      <h2 style="margin:0;font-family:'Bodoni Moda',serif;font-weight:400;font-size:clamp(30px,4vw,46px)">The practice</h2>
-      <p style="margin:0;font-family:'Courier Prime',monospace;font-size:12px;letter-spacing:0.2em;text-transform:uppercase;color:#4E6B5A">Three ways to work together</p>
-    </div>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:clamp(24px,3.5vw,44px)">
-      <a href="interior-design.html" style="text-decoration:none;color:#1F2A24;display:flex;flex-direction:column;gap:18px" style-hover="color:#C4544D">
-        <span style="aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;text-align:center;padding:20px;border:1px solid rgba(31,42,36,0.16);background:repeating-linear-gradient(135deg,#E7EFE6 0 9px,#FBF7EA 9px 18px);font-family:'Courier Prime',monospace;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:#7A8A80">interior project<br />photograph</span>
-        <span style="font-family:'Bodoni Moda',serif;font-size:26px">Interior design</span>
-        <span style="max-width:32ch;text-wrap:pretty">Whole rooms and single corners. Layered pattern, found furniture, colour chosen in the light it will live in.</span>
-      </a>
-      <a href="watercolors.html" style="text-decoration:none;color:#1F2A24;display:flex;flex-direction:column;gap:18px" style-hover="color:#C4544D">
-        <span style="aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;text-align:center;padding:20px;border:1px solid rgba(31,42,36,0.16);background:repeating-linear-gradient(135deg,#F6E2DE 0 9px,#FBF7EA 9px 18px);font-family:'Courier Prime',monospace;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:#8A7A78">watercolor<br />painting scan</span>
-        <span style="font-family:'Bodoni Moda',serif;font-size:26px">Watercolors</span>
-        <span style="max-width:32ch;text-wrap:pretty">Commissioned paintings on paper — houses, bouquets, venues, pattern studies. Framed or ready to frame.</span>
-      </a>
-      <a href="weddings.html" style="text-decoration:none;color:#1F2A24;display:flex;flex-direction:column;gap:18px" style-hover="color:#C4544D">
-        <span style="aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;text-align:center;padding:20px;border:1px solid rgba(31,42,36,0.16);background:repeating-linear-gradient(135deg,#F3EAD4 0 9px,#FBF7EA 9px 18px);font-family:'Courier Prime',monospace;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:#8A8272">wedding table<br />or banner detail</span>
-        <span style="font-family:'Bodoni Moda',serif;font-size:26px">Weddings</span>
-        <span style="max-width:32ch;text-wrap:pretty">Decorating, styling and hand-painted banners and signage, from the first sketch to the last table.</span>
-      </a>
-    </div>
-  </section>
-
-  <section id="about" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(32px,5vw,72px);align-items:start;padding:clamp(48px,8vw,110px) clamp(20px,5vw,64px);border-top:1px solid rgba(31,42,36,0.14)">
-    <div style="aspect-ratio:3/4;min-height:280px;display:flex;align-items:center;justify-content:center;text-align:center;padding:20px;border:1px solid rgba(31,42,36,0.16);background:repeating-linear-gradient(135deg,#F1E9D2 0 9px,#FBF7EA 9px 18px);font-family:'Courier Prime',monospace;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:#7A8A80">portrait of Bailey<br />at work</div>
-    <div style="max-width:560px">
-      <p style="margin:0 0 22px;font-family:'Courier Prime',monospace;font-size:12px;letter-spacing:0.22em;text-transform:uppercase;color:#4E6B5A">About</p>
-      <h2 style="margin:0 0 24px;font-family:'Bodoni Moda',serif;font-weight:400;font-size:clamp(28px,3.6vw,42px);line-height:1.15;text-wrap:pretty">Bailey works across rooms, paper and celebrations, and treats them as one practice.</h2>
-      <p style="margin:0 0 18px;text-wrap:pretty">A wedding needs the same eye as a sitting room: what the colour does at four in the afternoon, how much pattern a space can hold, where the hand shows. She paints the thing before she builds it, which is why so much of the work begins in watercolor.</p>
-      <p style="margin:0 0 30px;text-wrap:pretty">Commissions are taken a few at a time so each one gets the attention it needs.</p>
-      <p style="margin:0"><a href="{{ instagramUrl }}" style="font-family:'Bodoni Moda',serif;font-size:20px">Enquiries and current work live on Instagram &rarr;</a></p>
-      <sc-if value="{{ showAvailability }}" hint-placeholder-val="{{ true }}">
-        <p style="margin:24px 0 0;font-family:'Courier Prime',monospace;font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:#6B6353">Currently booking · send a note with dates and a few photographs</p>
-      </sc-if>
-    </div>
-  </section>
-
-  <footer style="background:#1F2A24;color:#CFCBB8;padding:clamp(36px,5vw,60px) clamp(20px,5vw,64px);display:flex;flex-wrap:wrap;gap:24px;align-items:flex-end;justify-content:space-between">
+  <aside style="flex:1 1 250px;max-width:300px;align-self:flex-start;position:sticky;top:0;padding:clamp(24px,3vw,40px);display:flex;flex-direction:column;gap:32px">
     <div>
-      <p style="margin:0 0 8px;font-family:'Bodoni Moda',serif;font-size:22px;color:#FBF7EA">chintz<span style="color:#E08C80">creative</span></p>
-      <p style="margin:0;font-family:'Courier Prime',monospace;font-size:12px;letter-spacing:0.16em;text-transform:uppercase">Interiors · Watercolors · Weddings</p>
+      <p style="margin:0;font-family:'Instrument Serif',serif;font-size:30px;line-height:1.05">chintz<br /><span style="font-style:italic;color:var(--accent2)">creative</span></p>
+      <p style="margin:14px 0 0;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted);line-height:1.8">Interiors<br />Watercolors<br />Weddings</p>
     </div>
-    <nav style="display:flex;flex-wrap:wrap;gap:26px;font-size:14px;letter-spacing:0.12em;text-transform:uppercase">
-      <a href="interior-design.html" style="color:#CFCBB8;text-decoration:none" style-hover="color:#E08C80">Interiors</a>
-      <a href="watercolors.html" style="color:#CFCBB8;text-decoration:none" style-hover="color:#E08C80">Watercolors</a>
-      <a href="weddings.html" style="color:#CFCBB8;text-decoration:none" style-hover="color:#E08C80">Weddings</a>
-      <a href="{{ instagramUrl }}" style="color:#CFCBB8;text-decoration:none" style-hover="color:#E08C80">Instagram</a>
+
+    <nav style="display:flex;flex-direction:column;gap:2px;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.06em">
+      <a href="#on-chintz" style="display:flex;gap:12px;padding:7px 0;border-top:1px solid var(--rule);color:var(--ink);text-decoration:none" style-hover="color:var(--accent)"><span style="color:var(--muted);min-width:24px">I</span>On chintz</a>
+      <a href="#contact" style="display:flex;gap:12px;padding:7px 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);color:var(--ink);text-decoration:none" style-hover="color:var(--accent)"><span style="color:var(--muted);min-width:24px">II</span>Contact</a>
     </nav>
-  </footer>
+
+    <div>
+      <p style="margin:0 0 10px;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted)">Colourway</p>
+      <div style="display:flex;gap:7px;flex-wrap:wrap">
+        <sc-for list="{{ themes }}" as="t" hint-placeholder-count="6">
+          <button type="button" onClick="{{ t.select }}" title="{{ t.name }}" aria-label="{{ t.name }} colourway" style="width:26px;height:26px;padding:0;cursor:pointer;background:{{ t.swatch }};border:1px solid {{ t.ring }};outline-offset:2px" style-hover="transform:translateY(-2px)"></button>
+        </sc-for>
+      </div>
+      <p style="margin:10px 0 0;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted)">{{ themeName }}</p>
+    </div>
+
+    <a href="{{ instagramUrl }}" target="_blank" rel="noopener" style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;text-decoration:none;color:var(--ink);border:1px solid var(--rule2);padding:11px 14px;text-align:center" style-hover="background:var(--accent);color:var(--onaccent);border-color:var(--accent)">DM Bailey &rarr;</a>
+  </aside>
+
+  <main style="flex:4 1 460px;min-width:0;border-left:1px solid var(--rule)">
+
+    <nav style="position:sticky;top:0;z-index:5;display:flex;flex-wrap:wrap;gap:0;background:var(--ground);border-bottom:1px solid var(--rule);font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.16em;text-transform:uppercase">
+      <a href="#on-chintz" style="padding:15px clamp(14px,2vw,22px);color:var(--ink);text-decoration:none;border-right:1px solid var(--rule)" style-hover="background:var(--tint);color:var(--accent)">On chintz</a>
+      <a href="#contact" style="padding:15px clamp(14px,2vw,22px);color:var(--onaccent);background:var(--accent);text-decoration:none;margin-left:auto" style-hover="background:var(--accent2)">Contact</a>
+    </nav>
+
+    <section style="padding:clamp(40px,7vw,110px) clamp(22px,4.5vw,72px);border-bottom:1px solid var(--rule)">
+      <p style="margin:0 0 30px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted)">A working archive · Bailey Powers, proprietor</p>
+      <h1 style="margin:0;font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(42px,7.5vw,92px);line-height:0.98;letter-spacing:-0.015em;max-width:20ch;text-wrap:pretty">Pattern, paint and celebration, kept in one place.</h1>
+      <p style="margin:32px 0 0;font-size:clamp(18px,1.9vw,22px);max-width:46ch;text-wrap:pretty">Interior design, watercolor commissions, wedding decorating and planning, and hand painted banners and signage. Everything here is drawn or arranged by hand, which is the older sense of <span style="font-style:italic">chintz</span>.</p>
+    </section>
+
+    <section id="on-chintz" style="padding:clamp(40px,6vw,90px) clamp(22px,4.5vw,72px);border-bottom:1px solid var(--rule)">
+      <p style="margin:0 0 26px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent)">On chintz</p>
+      <h2 style="margin:0 0 22px;font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(30px,4.4vw,56px);line-height:1.02;max-width:24ch;text-wrap:pretty">A word that went from priceless to insult, and is owed better.</h2>
+      <p style="margin:0 0 48px;max-width:54ch;font-size:clamp(18px,1.8vw,20px);text-wrap:pretty">Chintzy now means cheap, stingy, a little tatty. It did not start there. The history of the word is the reason this studio carries it.</p>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:clamp(26px,3.5vw,52px)">
+        <div style="border-top:1px solid var(--rule2);padding-top:18px">
+          <p style="margin:0 0 10px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted)">1600s · the word</p>
+          <h3 style="margin:0 0 12px;font-family:'Instrument Serif',serif;font-weight:400;font-size:26px;line-height:1.15"><span style="font-style:italic">Chīṁṭ</span>: spotted, bright</h3>
+          <p style="margin:0;text-wrap:pretty">The name comes from the Hindi <span style="font-style:italic">chīṁṭ</span>, spotted or variegated, by way of the Sanskrit <span style="font-style:italic">chitra</span>, bright and many coloured. English borrowed the plural, <span style="font-style:italic">chints</span>, mistook it for a singular, and by the late eighteenth century was spelling it chintz.</p>
+        </div>
+        <div style="border-top:1px solid var(--rule2);padding-top:18px">
+          <p style="margin:0 0 10px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted)">1600 to 1800 · the craft</p>
+          <h3 style="margin:0 0 12px;font-family:'Instrument Serif',serif;font-weight:400;font-size:26px;line-height:1.15">Months of work for one length</h3>
+          <p style="margin:0;text-wrap:pretty">On the Coromandel Coast the cloth was drawn by hand with a kalam pen, painted with mordants and wax resists, then dyed in a fixed order and washed between every bath. Madder, indigo and chay root gave colours that would not fade. A single panel could take months.</p>
+        </div>
+        <div style="border-top:1px solid var(--rule2);padding-top:18px">
+          <p style="margin:0 0 10px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted)">1686 and 1720 · banned</p>
+          <h3 style="margin:0 0 12px;font-family:'Instrument Serif',serif;font-weight:400;font-size:26px;line-height:1.15">Too good to be allowed</h3>
+          <p style="margin:0;text-wrap:pretty">European mills could not match it, so their governments outlawed it. France barred chintz imports in 1686. In 1720 Parliament forbade its use in apparel or "in or about any Bed, Chair, Cushion or other Household furniture." The Court of Versailles sat outside the law and wore it anyway.</p>
+        </div>
+        <div style="border-top:1px solid var(--rule2);padding-top:18px">
+          <p style="margin:0 0 10px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted)">1851 · cheapened</p>
+          <h3 style="margin:0 0 12px;font-family:'Instrument Serif',serif;font-weight:400;font-size:26px;line-height:1.15">How chintzy was born</h3>
+          <p style="margin:0;text-wrap:pretty">Roller printing put the pattern on everything. Once it was everywhere it was worth nothing, and the word turned: by the middle of the nineteenth century chintzy meant shabby and mean. The pattern never got worse. Only the making did.</p>
+        </div>
+        <div style="border-top:1px solid var(--rule2);padding-top:18px">
+          <p style="margin:0 0 10px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted)">1980s · the flounce</p>
+          <h3 style="margin:0 0 12px;font-family:'Instrument Serif',serif;font-weight:400;font-size:26px;line-height:1.15">Loved, then blamed</h3>
+          <p style="margin:0;text-wrap:pretty">Chintz came back in country house English decorating, covered every ruffle and skirted table in sight, and took the blame when taste turned to grey minimalism. Guilt by association. The cloth was never the problem.</p>
+        </div>
+        <div style="border-top:1px solid var(--rule2);padding-top:18px">
+          <p style="margin:0 0 10px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted)">Now · the challenge</p>
+          <h3 style="margin:0 0 12px;font-family:'Instrument Serif',serif;font-weight:400;font-size:26px;line-height:1.15">Back to the older meaning</h3>
+          <p style="margin:0;text-wrap:pretty">The work here takes the word at its origin: bright, many coloured, drawn by hand, made slowly and meant to last. Chintz Creative is a small argument that the name is worth reclaiming, one room, one painting and one wedding at a time.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:clamp(30px,4.5vw,64px);padding:clamp(40px,6vw,90px) clamp(22px,4.5vw,72px);border-bottom:1px solid var(--rule)">
+      <div>
+        <p style="margin:0 0 18px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent)">Contact</p>
+        <h2 style="margin:0 0 20px;font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(30px,4vw,50px);line-height:1.05">Two ways to reach Bailey</h2>
+        <p style="margin:0 0 26px;max-width:40ch;text-wrap:pretty">Direct message for quick questions and current work. The form for commissions, contracting and anything with dates, sizes or a budget attached.</p>
+        <a href="{{ instagramUrl }}" target="_blank" rel="noopener" style="display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.16em;text-transform:uppercase;text-decoration:none;color:var(--onaccent);background:var(--accent);padding:14px 26px" style-hover="background:var(--accent2)">DM on Instagram</a>
+        <dl style="margin:34px 0 0;display:grid;grid-template-columns:auto 1fr;gap:10px 20px;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.06em;color:var(--muted)">
+          <dt style="color:var(--ink)">IG</dt><dd style="margin:0"><a href="{{ instagramUrl }}" target="_blank" rel="noopener">@powerspartyofsix</a></dd>
+          <dt style="color:var(--ink)">Email</dt><dd style="margin:0"><a href="{{ mailtoUrl }}">mrs.baileypowers@gmail.com</a></dd>
+        </dl>
+      </div>
+
+      <form action="{{ formAction }}" method="POST" style="display:flex;flex-direction:column;gap:16px;border-top:1px solid var(--rule2);padding-top:22px">
+        <input type="hidden" name="_subject" value="New enquiry from chintzcreative.com" />
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_template" value="table" />
+        <input type="text" name="_honey" style="display:none" />
+        <label style="display:flex;flex-direction:column;gap:7px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted)">Name
+          <input type="text" name="name" required="required" autoComplete="name" placeholder="Your name" style="font-family:Spectral,Georgia,serif;font-size:16px;color:var(--ink);background:transparent;border:1px solid var(--rule2);padding:12px 14px;text-transform:none;letter-spacing:normal" style-focus="border-color:var(--accent);outline:none" />
+        </label>
+        <label style="display:flex;flex-direction:column;gap:7px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted)">Email
+          <input type="email" name="email" required="required" autoComplete="email" placeholder="you@example.com" style="font-family:Spectral,Georgia,serif;font-size:16px;color:var(--ink);background:transparent;border:1px solid var(--rule2);padding:12px 14px;text-transform:none;letter-spacing:normal" style-focus="border-color:var(--accent);outline:none" />
+        </label>
+        <label style="display:flex;flex-direction:column;gap:7px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted)">Enquiry about
+          <select name="enquiry" style="font-family:Spectral,Georgia,serif;font-size:16px;color:var(--ink);background:var(--ground);border:1px solid var(--rule2);padding:12px 14px;text-transform:none;letter-spacing:normal" style-focus="border-color:var(--accent);outline:none">
+            <option>Interior design</option>
+            <option>Watercolor commission</option>
+            <option>Wedding decorating or planning</option>
+            <option>Banners and signage</option>
+            <option>Something else</option>
+          </select>
+        </label>
+        <label style="display:flex;flex-direction:column;gap:7px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted)">Dates or timing
+          <input type="text" name="timing" placeholder="Wedding date, deadline, or none yet" style="font-family:Spectral,Georgia,serif;font-size:16px;color:var(--ink);background:transparent;border:1px solid var(--rule2);padding:12px 14px;text-transform:none;letter-spacing:normal" style-focus="border-color:var(--accent);outline:none" />
+        </label>
+        <label style="display:flex;flex-direction:column;gap:7px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted)">Details
+          <textarea name="message" rows="5" required="required" placeholder="The room, the piece or the day, and anything you have been collecting." style="font-family:Spectral,Georgia,serif;font-size:16px;color:var(--ink);background:transparent;border:1px solid var(--rule2);padding:12px 14px;resize:vertical;text-transform:none;letter-spacing:normal" style-focus="border-color:var(--accent);outline:none"></textarea>
+        </label>
+        <button type="submit" style="align-self:flex-start;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:var(--onaccent);background:var(--accent);border:none;padding:14px 26px;cursor:pointer" style-hover="background:var(--accent2)">Send to Bailey</button>
+        <p style="margin:0;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted)">Goes straight to mrs.baileypowers@gmail.com</p>
+      </form>
+    </section>
+
+    <footer style="padding:22px clamp(22px,4.5vw,72px) 40px;display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted)">
+      <span>chintzcreative · Bailey Powers</span>
+      <span>Colours after an 1850s chintz</span>
+    </footer>
+  </main>
 </div>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;instagramHandle&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;chintzcreative&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Contact&quot;},&quot;manifestoGround&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#2C5B4E&quot;,&quot;options&quot;:[&quot;#2C5B4E&quot;,&quot;#1F2A24&quot;,&quot;#8A3A36&quot;,&quot;#AB937E&quot;],&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Style&quot;},&quot;showAvailability&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Contact&quot;}}">
+<script type="text/x-dc" data-dc-script data-props="{&quot;instagramHandle&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;powerspartyofsix&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Contact&quot;},&quot;contactEmail&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;mrs.baileypowers@gmail.com&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Contact&quot;},&quot;defaultColourway&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;ivory&quot;,&quot;madder&quot;,&quot;ochre&quot;,&quot;leaf&quot;,&quot;china&quot;,&quot;clay&quot;],&quot;default&quot;:&quot;leaf&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Style&quot;}}">
+const THEMES = [
+  { key: "ivory", name: "Ivory ground", swatch: "#F2EBDA", ring: "rgba(0,0,0,0.25)",
+    vars: { ground: "#F4EEDF", ink: "#1E2C24", accent: "#2F6B52", accent2: "#B0453F", muted: "#5C6F62",
+      rule: "rgba(30,44,36,0.18)", rule2: "rgba(30,44,36,0.34)", tint: "rgba(30,44,36,0.07)", onaccent: "#F4EEDF" } },
+  { key: "madder", name: "Madder rose", swatch: "#D97B72", ring: "rgba(255,255,255,0.28)",
+    vars: { ground: "#3B2226", ink: "#FBEFEB", accent: "#E9938A", accent2: "#E7B457", muted: "#C5A5A2",
+      rule: "rgba(251,239,235,0.16)", rule2: "rgba(251,239,235,0.3)", tint: "rgba(251,239,235,0.07)", onaccent: "#3B2226" } },
+  { key: "ochre", name: "Ochre", swatch: "#E7B457", ring: "rgba(255,255,255,0.28)",
+    vars: { ground: "#2B2416", ink: "#F7EFDC", accent: "#E7B457", accent2: "#E9938A", muted: "#BEAE8C",
+      rule: "rgba(247,239,220,0.16)", rule2: "rgba(247,239,220,0.3)", tint: "rgba(247,239,220,0.07)", onaccent: "#2B2416" } },
+  { key: "leaf", name: "Leaf green", swatch: "#5C8A72", ring: "rgba(255,255,255,0.28)",
+    vars: { ground: "#14241D", ink: "#F2EBDA", accent: "#E7B457", accent2: "#E9938A", muted: "#A9BFAE",
+      rule: "rgba(242,235,218,0.16)", rule2: "rgba(242,235,218,0.3)", tint: "rgba(242,235,218,0.07)", onaccent: "#14241D" } },
+  { key: "china", name: "China blue", swatch: "#9FC0D8", ring: "rgba(255,255,255,0.28)",
+    vars: { ground: "#182833", ink: "#EEF3F7", accent: "#9FC0D8", accent2: "#E9938A", muted: "#A3B7C4",
+      rule: "rgba(238,243,247,0.16)", rule2: "rgba(238,243,247,0.3)", tint: "rgba(238,243,247,0.07)", onaccent: "#182833" } },
+  { key: "clay", name: "Clay branch", swatch: "#A88C74", ring: "rgba(255,255,255,0.28)",
+    vars: { ground: "#2E2620", ink: "#F5ECE1", accent: "#CFA582", accent2: "#E9938A", muted: "#BCA895",
+      rule: "rgba(245,236,225,0.16)", rule2: "rgba(245,236,225,0.3)", tint: "rgba(245,236,225,0.07)", onaccent: "#2E2620" } },
+];
+
 class Component extends DCLogic {
+  state = { theme: "leaf" };
+
+  componentDidMount() {
+    let saved = null;
+    try { saved = localStorage.getItem("chintz.colourway"); } catch (e) {}
+    const key = THEMES.some((t) => t.key === saved) ? saved : (this.props.defaultColourway ?? "leaf");
+    this.setState({ theme: key });
+    this.apply(key);
+  }
+
+  apply(key) {
+    const t = THEMES.find((x) => x.key === key) || THEMES[3];
+    const root = document.documentElement;
+    Object.keys(t.vars).forEach((k) => root.style.setProperty("--" + k, t.vars[k]));
+    root.style.setProperty("color-scheme", key === "ivory" ? "light" : "dark");
+  }
+
+  pick(key) {
+    this.setState({ theme: key });
+    this.apply(key);
+    try { localStorage.setItem("chintz.colourway", key); } catch (e) {}
+  }
+
   renderVals() {
-    const handle = (this.props.instagramHandle ?? "chintzcreative").replace(/^@/, "");
+    const active = this.state.theme;
+    const handle = (this.props.instagramHandle ?? "powerspartyofsix").replace(/^@/, "");
+    const email = this.props.contactEmail ?? "mrs.baileypowers@gmail.com";
+    const current = THEMES.find((t) => t.key === active) || THEMES[3];
     return {
-      instagramUrl: "https://instagram.com/" + handle,
-      manifestoGround: this.props.manifestoGround ?? "#2C5B4E",
-      showAvailability: this.props.showAvailability ?? true,
+      themes: THEMES.map((t) => ({
+        key: t.key,
+        name: t.name,
+        swatch: t.swatch,
+        ring: t.key === active ? (t.vars.accent) : t.ring,
+        select: () => this.pick(t.key),
+      })),
+      themeName: current.name,
+      instagramUrl: "https://www.instagram.com/" + handle + "/",
+      mailtoUrl: "mailto:" + email,
+      formAction: "https://formsubmit.co/" + email,
     };
   }
 }
