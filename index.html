@@ -1,224 +1,384 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./support.js"></script>
-</head>
-<body>
-<x-dc>
-<helmet>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Spectral:ital,wght@0,300;0,400;0,500;1,300;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
-<style>
-  :root {
-    --ground: #14241D; --ink: #F2EBDA; --accent: #E7B457; --accent2: #E9938A;
-    --muted: #A9BFAE; --rule: rgba(242,235,218,0.16); --rule2: rgba(242,235,218,0.3);
-    --tint: rgba(242,235,218,0.07); --onaccent: #14241D;
+<title>Custom Watercolor Commissions &amp; Hand Lettering | Chintz Creative</title>
+<meta name="description" content="Custom watercolor paintings, hand lettering and hand painted birthday banners by Bailey Powers. Personalized keepsakes for birthdays, weddings and gifts.">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<link rel="canonical" href="https://chintzcreative.com/">
+<meta name="author" content="Bailey Powers">
+<meta name="theme-color" content="#1F4A3E">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/custom-watercolor-40th-birthday-crest.jpg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Chintz Creative">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Custom Watercolor Commissions &amp; Hand Lettering | Chintz Creative">
+<meta property="og:description" content="Custom watercolor paintings, hand lettering and hand painted birthday banners by Bailey Powers. Personalized keepsakes for birthdays, weddings and gifts.">
+<meta property="og:url" content="https://chintzcreative.com/">
+<meta property="og:image" content="https://chintzcreative.com/assets/custom-watercolor-40th-birthday-crest.jpg">
+<meta property="og:image:alt" content="Framed custom 40th birthday watercolor with a hand lettered monogram crest by Chintz Creative">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Custom Watercolor Commissions &amp; Hand Lettering | Chintz Creative">
+<meta name="twitter:description" content="Custom watercolor paintings, hand lettering and hand painted birthday banners by Bailey Powers. Personalized keepsakes for birthdays, weddings and gifts.">
+<meta name="twitter:image" content="https://chintzcreative.com/assets/custom-watercolor-40th-birthday-crest.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Spectral:ital,wght@0,300;0,400;0,500;1,300;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+<script src="assets/theme.js"></script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": [
+    "LocalBusiness",
+    "ArtGallery"
+   ],
+   "@id": "https://chintzcreative.com/#business",
+   "name": "Chintz Creative",
+   "alternateName": "chintzcreative",
+   "url": "https://chintzcreative.com/",
+   "logo": "https://chintzcreative.com/assets/favicon.svg",
+   "image": "https://chintzcreative.com/assets/custom-watercolor-40th-birthday-crest.jpg",
+   "description": "Custom watercolor paintings, hand lettering and hand painted birthday banners by Bailey Powers.",
+   "email": "mrs.baileypowers@gmail.com",
+   "priceRange": "$",
+   "founder": {
+    "@id": "https://chintzcreative.com/#bailey"
+   },
+   "sameAs": [
+    "https://www.instagram.com/powerspartyofsix/"
+   ],
+   "areaServed": {
+    "@type": "Country",
+    "name": "United States"
+   },
+   "knowsAbout": [
+    "Watercolor painting",
+    "Custom watercolor portraits",
+    "Hand lettering",
+    "Brush lettering",
+    "Wedding signage",
+    "Hand painted banners",
+    "Birthday banners",
+    "Chintz"
+   ],
+   "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Commissions",
+    "itemListElement": [
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@id": "https://chintzcreative.com/custom-watercolor#service"
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@id": "https://chintzcreative.com/hand-lettering#service"
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@id": "https://chintzcreative.com/birthday-banners#service"
+      }
+     }
+    ]
+   },
+   "potentialAction": {
+    "@type": "OrderAction",
+    "target": "https://chintzcreative.com/commission",
+    "name": "Commission a piece"
+   }
+  },
+  {
+   "@type": "Person",
+   "@id": "https://chintzcreative.com/#bailey",
+   "name": "Bailey Powers",
+   "jobTitle": "Watercolor artist and hand letterer",
+   "worksFor": {
+    "@id": "https://chintzcreative.com/#business"
+   },
+   "sameAs": [
+    "https://www.instagram.com/powerspartyofsix/"
+   ],
+   "knowsAbout": [
+    "Watercolor",
+    "Hand lettering",
+    "Interior design"
+   ]
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://chintzcreative.com/#website",
+   "url": "https://chintzcreative.com/",
+   "name": "Chintz Creative",
+   "inLanguage": "en-US",
+   "publisher": {
+    "@id": "https://chintzcreative.com/#business"
+   }
+  },
+  {
+   "@type": "VisualArtwork",
+   "@id": "https://chintzcreative.com/#bek-1986",
+   "name": "BEK, 1986: a custom 40th birthday watercolor",
+   "artform": "Watercolor painting with hand lettering",
+   "artMedium": "Watercolor and ink on paper",
+   "creator": {
+    "@id": "https://chintzcreative.com/#bailey"
+   },
+   "image": "https://chintzcreative.com/assets/custom-watercolor-40th-birthday-crest.jpg",
+   "description": "Custom 40th birthday watercolor with a BEK monogram crest in a laurel wreath, the birth year 1986, Wendell NC lettered in copper, an NC State pennant and wolf mascot, a cross, and happy 40th birthday in brush lettering. Framed in gold."
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://chintzcreative.com/#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "How do I order a custom watercolor painting?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Fill out the commission intake form at chintzcreative.com/commission, or send a DM on Instagram to @powerspartyofsix. Include the occasion, who it is for, the details to paint, the size and your deadline. Bailey replies with a quote and timing before any painting starts."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What can be included in a custom watercolor?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Anything that tells the person's story: names, initials or a monogram crest, a birth year, a hometown, a school or team, faith symbols, pets, favorite places and objects. Each piece is designed around the details you send."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Do you make hand painted birthday banners?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. Chintz Creative paints custom birthday banners by hand with the name, age and party colors, for first birthdays through milestone 30th, 40th and 50th birthdays."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Do you offer hand lettering for weddings and events?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. Hand lettering is available for wedding welcome signs, menus, seating charts, place cards, framed quotes, verses and gift pieces."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How much does a custom watercolor cost?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Price depends on size, level of detail and whether lettering is included. The intake form has a budget question so Bailey can suggest a piece that fits."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Why is the studio called Chintz Creative?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Chintz was originally hand painted cotton from India's Coromandel Coast, so prized that France banned it in 1686 and England in 1720. The name reclaims that older meaning: bright, many colored and made by hand."
+     }
+    }
+   ]
+  },
+  {
+   "@type": "WebPage",
+   "@id": "https://chintzcreative.com/#webpage",
+   "url": "https://chintzcreative.com/",
+   "name": "Chintz Creative",
+   "isPartOf": {
+    "@id": "https://chintzcreative.com/#website"
+   },
+   "about": {
+    "@id": "https://chintzcreative.com/#business"
+   },
+   "primaryImageOfPage": "https://chintzcreative.com/assets/custom-watercolor-40th-birthday-crest.jpg"
+  },
+  {
+   "@type": "VisualArtwork",
+   "@id": "https://chintzcreative.com/#art-2",
+   "name": "SLW: a custom watercolor keepsake",
+   "artform": "Watercolor painting",
+   "artMedium": "Watercolor and ink on paper",
+   "creator": {
+    "@id": "https://chintzcreative.com/#bailey"
+   },
+   "image": "https://chintzcreative.com/assets/custom-watercolor-monogram-crest-keepsake-slw.jpg",
+   "description": "Custom watercolor keepsake with an SLW monogram crest surrounded by the things one person loved: a Pepsi can, a Volkswagen badge, a cinnamon roll, a horseshoe, a Red Man pouch, a cup of coffee and the Massey Ferguson logo. Framed in wood."
+  },
+  {
+   "@type": "VisualArtwork",
+   "@id": "https://chintzcreative.com/#art-3",
+   "name": "A taste of home: orange branch watercolor",
+   "artform": "Watercolor painting",
+   "artMedium": "Watercolor and ink on paper",
+   "creator": {
+    "@id": "https://chintzcreative.com/#bailey"
+   },
+   "image": "https://chintzcreative.com/assets/watercolor-orange-branch-a-taste-of-home.jpg",
+   "description": "Botanical watercolor of two oranges on a leafy branch with blossoms, hand lettered \"a taste of home\" and signed bkp."
+  },
+  {
+   "@type": "VisualArtwork",
+   "@id": "https://chintzcreative.com/#art-chalkboard",
+   "name": "Fall never tasted so good: restaurant chalkboard art",
+   "artform": "Chalkboard art and hand lettering",
+   "artMedium": "Chalk on chalkboard",
+   "creator": {
+    "@id": "https://chintzcreative.com/#bailey"
+   },
+   "image": "https://chintzcreative.com/assets/hand-lettered-chalkboard-art-restaurant-fall-menu.jpg",
+   "description": "Hand lettered chalkboard menu art for a restaurant community board, with fall never tasted so good in brush script, an illustrated cow at a campfire for a s'mores milkshake, and a chicken and waffles sandwich."
+  },
+  {
+   "@type": "VisualArtwork",
+   "@id": "https://chintzcreative.com/#art-don",
+   "name": "Congrats, Don: hand painted Auburn graduation banner",
+   "artform": "Hand painted banner",
+   "artMedium": "Acrylic paint on kraft paper",
+   "creator": {
+    "@id": "https://chintzcreative.com/#bailey"
+   },
+   "image": "https://chintzcreative.com/assets/hand-painted-graduation-banner-congrats-auburn.jpg",
+   "description": "Hand painted graduation banner on kraft paper showing Samford Hall at Auburn University, an oak tree, cows on a hill and the AU logo, lettered congrats, Don in orange"
   }
-  html, body { margin: 0; padding: 0; background: var(--ground); transition: background 300ms ease; }
-  * { box-sizing: border-box; }
-  a { color: var(--accent); text-underline-offset: 4px; }
-  a:hover { color: var(--accent2); }
-  ::selection { background: var(--accent2); color: var(--onaccent); }
-  input, select, textarea { font: inherit; }
-  input::placeholder, textarea::placeholder { color: var(--muted); opacity: 1; }
-</style>
-</helmet>
-<div style="background:var(--ground);color:var(--ink);font-family:Spectral,Georgia,serif;font-weight:300;font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;display:flex;flex-wrap:wrap;align-items:flex-start;gap:0;transition:background 300ms ease,color 300ms ease">
-
-  <aside style="flex:1 1 250px;max-width:300px;align-self:flex-start;position:sticky;top:0;padding:clamp(24px,3vw,40px);display:flex;flex-direction:column;gap:32px">
-    <div>
-      <p style="margin:0;font-family:'Instrument Serif',serif;font-size:30px;line-height:1.05">chintz<br /><span style="font-style:italic;color:var(--accent2)">creative</span></p>
-      <p style="margin:14px 0 0;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted);line-height:1.8">Interiors<br />Watercolors<br />Weddings</p>
-    </div>
-
-    <nav style="display:flex;flex-direction:column;gap:2px;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.06em">
-      <a href="#on-chintz" style="display:flex;gap:12px;padding:7px 0;border-top:1px solid var(--rule);color:var(--ink);text-decoration:none" style-hover="color:var(--accent)"><span style="color:var(--muted);min-width:24px">I</span>On chintz</a>
-      <a href="#contact" style="display:flex;gap:12px;padding:7px 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);color:var(--ink);text-decoration:none" style-hover="color:var(--accent)"><span style="color:var(--muted);min-width:24px">II</span>Contact</a>
-    </nav>
-
-    <div>
-      <p style="margin:0 0 10px;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted)">Colourway</p>
-      <div style="display:flex;gap:7px;flex-wrap:wrap">
-        <sc-for list="{{ themes }}" as="t" hint-placeholder-count="6">
-          <button type="button" onClick="{{ t.select }}" title="{{ t.name }}" aria-label="{{ t.name }} colourway" style="width:26px;height:26px;padding:0;cursor:pointer;background:{{ t.swatch }};border:1px solid {{ t.ring }};outline-offset:2px" style-hover="transform:translateY(-2px)"></button>
-        </sc-for>
-      </div>
-      <p style="margin:10px 0 0;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted)">{{ themeName }}</p>
-    </div>
-
-    <a href="{{ instagramUrl }}" target="_blank" rel="noopener" style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;text-decoration:none;color:var(--ink);border:1px solid var(--rule2);padding:11px 14px;text-align:center" style-hover="background:var(--accent);color:var(--onaccent);border-color:var(--accent)">DM Bailey &rarr;</a>
-  </aside>
-
-  <main style="flex:4 1 460px;min-width:0;border-left:1px solid var(--rule)">
-
-    <nav style="position:sticky;top:0;z-index:5;display:flex;flex-wrap:wrap;gap:0;background:var(--ground);border-bottom:1px solid var(--rule);font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.16em;text-transform:uppercase">
-      <a href="#on-chintz" style="padding:15px clamp(14px,2vw,22px);color:var(--ink);text-decoration:none;border-right:1px solid var(--rule)" style-hover="background:var(--tint);color:var(--accent)">On chintz</a>
-      <a href="#contact" style="padding:15px clamp(14px,2vw,22px);color:var(--onaccent);background:var(--accent);text-decoration:none;margin-left:auto" style-hover="background:var(--accent2)">Contact</a>
-    </nav>
-
-    <section style="padding:clamp(40px,7vw,110px) clamp(22px,4.5vw,72px);border-bottom:1px solid var(--rule)">
-      <p style="margin:0 0 30px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted)">A working archive · Bailey Powers, proprietor</p>
-      <h1 style="margin:0;font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(42px,7.5vw,92px);line-height:0.98;letter-spacing:-0.015em;max-width:20ch;text-wrap:pretty">Pattern, paint and celebration, kept in one place.</h1>
-      <p style="margin:32px 0 0;font-size:clamp(18px,1.9vw,22px);max-width:46ch;text-wrap:pretty">Interior design, watercolor commissions, wedding decorating and planning, and hand painted banners and signage. Everything here is drawn or arranged by hand, which is the older sense of <span style="font-style:italic">chintz</span>.</p>
-    </section>
-
-    <section id="on-chintz" style="padding:clamp(40px,6vw,90px) clamp(22px,4.5vw,72px);border-bottom:1px solid var(--rule)">
-      <p style="margin:0 0 26px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent)">On chintz</p>
-      <h2 style="margin:0 0 22px;font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(30px,4.4vw,56px);line-height:1.02;max-width:24ch;text-wrap:pretty">A word that went from priceless to insult, and is owed better.</h2>
-      <p style="margin:0 0 48px;max-width:54ch;font-size:clamp(18px,1.8vw,20px);text-wrap:pretty">Chintzy now means cheap, stingy, a little tatty. It did not start there. The history of the word is the reason this studio carries it.</p>
-
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:clamp(26px,3.5vw,52px)">
-        <div style="border-top:1px solid var(--rule2);padding-top:18px">
-          <p style="margin:0 0 10px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted)">1600s · the word</p>
-          <h3 style="margin:0 0 12px;font-family:'Instrument Serif',serif;font-weight:400;font-size:26px;line-height:1.15"><span style="font-style:italic">Chīṁṭ</span>: spotted, bright</h3>
-          <p style="margin:0;text-wrap:pretty">The name comes from the Hindi <span style="font-style:italic">chīṁṭ</span>, spotted or variegated, by way of the Sanskrit <span style="font-style:italic">chitra</span>, bright and many coloured. English borrowed the plural, <span style="font-style:italic">chints</span>, mistook it for a singular, and by the late eighteenth century was spelling it chintz.</p>
-        </div>
-        <div style="border-top:1px solid var(--rule2);padding-top:18px">
-          <p style="margin:0 0 10px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted)">1600 to 1800 · the craft</p>
-          <h3 style="margin:0 0 12px;font-family:'Instrument Serif',serif;font-weight:400;font-size:26px;line-height:1.15">Months of work for one length</h3>
-          <p style="margin:0;text-wrap:pretty">On the Coromandel Coast the cloth was drawn by hand with a kalam pen, painted with mordants and wax resists, then dyed in a fixed order and washed between every bath. Madder, indigo and chay root gave colours that would not fade. A single panel could take months.</p>
-        </div>
-        <div style="border-top:1px solid var(--rule2);padding-top:18px">
-          <p style="margin:0 0 10px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted)">1686 and 1720 · banned</p>
-          <h3 style="margin:0 0 12px;font-family:'Instrument Serif',serif;font-weight:400;font-size:26px;line-height:1.15">Too good to be allowed</h3>
-          <p style="margin:0;text-wrap:pretty">European mills could not match it, so their governments outlawed it. France barred chintz imports in 1686. In 1720 Parliament forbade its use in apparel or "in or about any Bed, Chair, Cushion or other Household furniture." The Court of Versailles sat outside the law and wore it anyway.</p>
-        </div>
-        <div style="border-top:1px solid var(--rule2);padding-top:18px">
-          <p style="margin:0 0 10px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted)">1851 · cheapened</p>
-          <h3 style="margin:0 0 12px;font-family:'Instrument Serif',serif;font-weight:400;font-size:26px;line-height:1.15">How chintzy was born</h3>
-          <p style="margin:0;text-wrap:pretty">Roller printing put the pattern on everything. Once it was everywhere it was worth nothing, and the word turned: by the middle of the nineteenth century chintzy meant shabby and mean. The pattern never got worse. Only the making did.</p>
-        </div>
-        <div style="border-top:1px solid var(--rule2);padding-top:18px">
-          <p style="margin:0 0 10px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted)">1980s · the flounce</p>
-          <h3 style="margin:0 0 12px;font-family:'Instrument Serif',serif;font-weight:400;font-size:26px;line-height:1.15">Loved, then blamed</h3>
-          <p style="margin:0;text-wrap:pretty">Chintz came back in country house English decorating, covered every ruffle and skirted table in sight, and took the blame when taste turned to grey minimalism. Guilt by association. The cloth was never the problem.</p>
-        </div>
-        <div style="border-top:1px solid var(--rule2);padding-top:18px">
-          <p style="margin:0 0 10px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted)">Now · the challenge</p>
-          <h3 style="margin:0 0 12px;font-family:'Instrument Serif',serif;font-weight:400;font-size:26px;line-height:1.15">Back to the older meaning</h3>
-          <p style="margin:0;text-wrap:pretty">The work here takes the word at its origin: bright, many coloured, drawn by hand, made slowly and meant to last. Chintz Creative is a small argument that the name is worth reclaiming, one room, one painting and one wedding at a time.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:clamp(30px,4.5vw,64px);padding:clamp(40px,6vw,90px) clamp(22px,4.5vw,72px);border-bottom:1px solid var(--rule)">
-      <div>
-        <p style="margin:0 0 18px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent)">Contact</p>
-        <h2 style="margin:0 0 20px;font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(30px,4vw,50px);line-height:1.05">Two ways to reach Bailey</h2>
-        <p style="margin:0 0 26px;max-width:40ch;text-wrap:pretty">Direct message for quick questions and current work. The form for commissions, contracting and anything with dates, sizes or a budget attached.</p>
-        <a href="{{ instagramUrl }}" target="_blank" rel="noopener" style="display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.16em;text-transform:uppercase;text-decoration:none;color:var(--onaccent);background:var(--accent);padding:14px 26px" style-hover="background:var(--accent2)">DM on Instagram</a>
-        <dl style="margin:34px 0 0;display:grid;grid-template-columns:auto 1fr;gap:10px 20px;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.06em;color:var(--muted)">
-          <dt style="color:var(--ink)">IG</dt><dd style="margin:0"><a href="{{ instagramUrl }}" target="_blank" rel="noopener">@powerspartyofsix</a></dd>
-          <dt style="color:var(--ink)">Email</dt><dd style="margin:0"><a href="{{ mailtoUrl }}">mrs.baileypowers@gmail.com</a></dd>
-        </dl>
-      </div>
-
-      <form action="{{ formAction }}" method="POST" style="display:flex;flex-direction:column;gap:16px;border-top:1px solid var(--rule2);padding-top:22px">
-        <input type="hidden" name="_subject" value="New enquiry from chintzcreative.com" />
-        <input type="hidden" name="_captcha" value="false" />
-        <input type="hidden" name="_template" value="table" />
-        <input type="text" name="_honey" style="display:none" />
-        <label style="display:flex;flex-direction:column;gap:7px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted)">Name
-          <input type="text" name="name" required="required" autoComplete="name" placeholder="Your name" style="font-family:Spectral,Georgia,serif;font-size:16px;color:var(--ink);background:transparent;border:1px solid var(--rule2);padding:12px 14px;text-transform:none;letter-spacing:normal" style-focus="border-color:var(--accent);outline:none" />
-        </label>
-        <label style="display:flex;flex-direction:column;gap:7px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted)">Email
-          <input type="email" name="email" required="required" autoComplete="email" placeholder="you@example.com" style="font-family:Spectral,Georgia,serif;font-size:16px;color:var(--ink);background:transparent;border:1px solid var(--rule2);padding:12px 14px;text-transform:none;letter-spacing:normal" style-focus="border-color:var(--accent);outline:none" />
-        </label>
-        <label style="display:flex;flex-direction:column;gap:7px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted)">Enquiry about
-          <select name="enquiry" style="font-family:Spectral,Georgia,serif;font-size:16px;color:var(--ink);background:var(--ground);border:1px solid var(--rule2);padding:12px 14px;text-transform:none;letter-spacing:normal" style-focus="border-color:var(--accent);outline:none">
-            <option>Interior design</option>
-            <option>Watercolor commission</option>
-            <option>Wedding decorating or planning</option>
-            <option>Banners and signage</option>
-            <option>Something else</option>
-          </select>
-        </label>
-        <label style="display:flex;flex-direction:column;gap:7px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted)">Dates or timing
-          <input type="text" name="timing" placeholder="Wedding date, deadline, or none yet" style="font-family:Spectral,Georgia,serif;font-size:16px;color:var(--ink);background:transparent;border:1px solid var(--rule2);padding:12px 14px;text-transform:none;letter-spacing:normal" style-focus="border-color:var(--accent);outline:none" />
-        </label>
-        <label style="display:flex;flex-direction:column;gap:7px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted)">Details
-          <textarea name="message" rows="5" required="required" placeholder="The room, the piece or the day, and anything you have been collecting." style="font-family:Spectral,Georgia,serif;font-size:16px;color:var(--ink);background:transparent;border:1px solid var(--rule2);padding:12px 14px;resize:vertical;text-transform:none;letter-spacing:normal" style-focus="border-color:var(--accent);outline:none"></textarea>
-        </label>
-        <button type="submit" style="align-self:flex-start;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:var(--onaccent);background:var(--accent);border:none;padding:14px 26px;cursor:pointer" style-hover="background:var(--accent2)">Send to Bailey</button>
-        <p style="margin:0;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted)">Goes straight to mrs.baileypowers@gmail.com</p>
-      </form>
-    </section>
-
-    <footer style="padding:22px clamp(22px,4.5vw,72px) 40px;display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted)">
-      <span>chintzcreative · Bailey Powers</span>
-      <span>Colours after an 1850s chintz</span>
-    </footer>
-  </main>
-</div>
-</x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;instagramHandle&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;powerspartyofsix&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Contact&quot;},&quot;contactEmail&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;mrs.baileypowers@gmail.com&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Contact&quot;},&quot;defaultColourway&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;ivory&quot;,&quot;madder&quot;,&quot;ochre&quot;,&quot;leaf&quot;,&quot;china&quot;,&quot;clay&quot;],&quot;default&quot;:&quot;leaf&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Style&quot;}}">
-const THEMES = [
-  { key: "ivory", name: "Ivory ground", swatch: "#F2EBDA", ring: "rgba(0,0,0,0.25)",
-    vars: { ground: "#F4EEDF", ink: "#1E2C24", accent: "#2F6B52", accent2: "#B0453F", muted: "#5C6F62",
-      rule: "rgba(30,44,36,0.18)", rule2: "rgba(30,44,36,0.34)", tint: "rgba(30,44,36,0.07)", onaccent: "#F4EEDF" } },
-  { key: "madder", name: "Madder rose", swatch: "#D97B72", ring: "rgba(255,255,255,0.28)",
-    vars: { ground: "#3B2226", ink: "#FBEFEB", accent: "#E9938A", accent2: "#E7B457", muted: "#C5A5A2",
-      rule: "rgba(251,239,235,0.16)", rule2: "rgba(251,239,235,0.3)", tint: "rgba(251,239,235,0.07)", onaccent: "#3B2226" } },
-  { key: "ochre", name: "Ochre", swatch: "#E7B457", ring: "rgba(255,255,255,0.28)",
-    vars: { ground: "#2B2416", ink: "#F7EFDC", accent: "#E7B457", accent2: "#E9938A", muted: "#BEAE8C",
-      rule: "rgba(247,239,220,0.16)", rule2: "rgba(247,239,220,0.3)", tint: "rgba(247,239,220,0.07)", onaccent: "#2B2416" } },
-  { key: "leaf", name: "Leaf green", swatch: "#5C8A72", ring: "rgba(255,255,255,0.28)",
-    vars: { ground: "#14241D", ink: "#F2EBDA", accent: "#E7B457", accent2: "#E9938A", muted: "#A9BFAE",
-      rule: "rgba(242,235,218,0.16)", rule2: "rgba(242,235,218,0.3)", tint: "rgba(242,235,218,0.07)", onaccent: "#14241D" } },
-  { key: "china", name: "China blue", swatch: "#9FC0D8", ring: "rgba(255,255,255,0.28)",
-    vars: { ground: "#182833", ink: "#EEF3F7", accent: "#9FC0D8", accent2: "#E9938A", muted: "#A3B7C4",
-      rule: "rgba(238,243,247,0.16)", rule2: "rgba(238,243,247,0.3)", tint: "rgba(238,243,247,0.07)", onaccent: "#182833" } },
-  { key: "clay", name: "Clay branch", swatch: "#A88C74", ring: "rgba(255,255,255,0.28)",
-    vars: { ground: "#2E2620", ink: "#F5ECE1", accent: "#CFA582", accent2: "#E9938A", muted: "#BCA895",
-      rule: "rgba(245,236,225,0.16)", rule2: "rgba(245,236,225,0.3)", tint: "rgba(245,236,225,0.07)", onaccent: "#2E2620" } },
-];
-
-class Component extends DCLogic {
-  state = { theme: "leaf" };
-
-  componentDidMount() {
-    let saved = null;
-    try { saved = localStorage.getItem("chintz.colourway"); } catch (e) {}
-    const key = THEMES.some((t) => t.key === saved) ? saved : (this.props.defaultColourway ?? "leaf");
-    this.setState({ theme: key });
-    this.apply(key);
-  }
-
-  apply(key) {
-    const t = THEMES.find((x) => x.key === key) || THEMES[3];
-    const root = document.documentElement;
-    Object.keys(t.vars).forEach((k) => root.style.setProperty("--" + k, t.vars[k]));
-    root.style.setProperty("color-scheme", key === "ivory" ? "light" : "dark");
-  }
-
-  pick(key) {
-    this.setState({ theme: key });
-    this.apply(key);
-    try { localStorage.setItem("chintz.colourway", key); } catch (e) {}
-  }
-
-  renderVals() {
-    const active = this.state.theme;
-    const handle = (this.props.instagramHandle ?? "powerspartyofsix").replace(/^@/, "");
-    const email = this.props.contactEmail ?? "mrs.baileypowers@gmail.com";
-    const current = THEMES.find((t) => t.key === active) || THEMES[3];
-    return {
-      themes: THEMES.map((t) => ({
-        key: t.key,
-        name: t.name,
-        swatch: t.swatch,
-        ring: t.key === active ? (t.vars.accent) : t.ring,
-        select: () => this.pick(t.key),
-      })),
-      themeName: current.name,
-      instagramUrl: "https://www.instagram.com/" + handle + "/",
-      mailtoUrl: "mailto:" + email,
-      formAction: "https://formsubmit.co/" + email,
-    };
-  }
+ ]
 }
 </script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="Chintz Creative home">chintz <em>creative</em></a>
+    <nav class="mono" aria-label="Main">
+      <a href="/custom-watercolor">Watercolors</a>
+      <a href="/hand-lettering">Lettering</a>
+      <a href="/birthday-banners">Banners</a>
+      <a href="/hand-painted-gifts">Gifts</a>
+      <a href="/#faq">FAQ</a>
+      <a href="/#on-chintz">On chintz</a>
+    </nav>
+    <div class="dial" aria-label="Colourway"><div data-colourways></div></div>
+    <a class="btn" href="/commission">Commission a piece</a>
+  </div>
+</header>
+<main id="main">
+
+<section class="hero pattern" aria-labelledby="hero-title"><div class="wrap"><div class="label">
+  <p class="mono kicker">Chintz Creative · Bailey Powers</p>
+  <h1 id="hero-title">Custom <em>watercolors</em>, hand lettering and birthday banners, painted by hand.</h1>
+  <p class="lede">Personalized watercolor paintings, lettered signs and painted party banners, each one designed around the person, the year and the story you send.</p>
+  <div class="ctas"><a class="btn" href="/commission">Start a commission</a><a class="btn ghost" href="https://www.instagram.com/powerspartyofsix/" target="_blank" rel="noopener">DM on Instagram</a></div>
+</div></div></section>
+
+<section id="services" class="block" aria-labelledby="services-title"><div class="wrap">
+  <div class="head"><p class="mono kicker">What Bailey makes</p><h2 id="services-title">Three kinds of commission</h2>
+  <p class="answer">Chintz Creative is a small studio run by Bailey Powers. Every piece is painted or lettered by hand to order: custom watercolor paintings, hand lettering, and hand painted birthday banners.</p></div>
+  <div class="services">
+    <article class="service"><p class="mono" style="color:var(--madder)">01</p><h3><a href="/custom-watercolor">Custom watercolor paintings</a></h3>
+      <p>Original watercolor pieces painted to order. Send the names, dates, places and small details that matter and they are gathered into one framed keepsake.</p>
+      <ul class="dots"><li>Milestone birthday watercolors</li><li>Monogram crests and family pieces</li><li>Hometown, school and team keepsakes</li><li>Personalized gifts for any occasion</li></ul>
+      <a class="more" href="/custom-watercolor">Custom watercolors &rarr;</a></article>
+    <article class="service"><p class="mono" style="color:var(--madder)">02</p><h3><a href="/hand-lettering">Hand lettering</a></h3>
+      <p>Names, quotes, verses and dates lettered by hand in brush script and classic serif styles, on paper, signs and paintings.</p>
+      <ul class="dots"><li>Wedding welcome signs and menus</li><li>Seating charts and place cards</li><li>Chalkboard art and menu boards</li><li>Framed quotes and verses</li></ul>
+      <a class="more" href="/hand-lettering">Hand lettering &rarr;</a></article>
+    <article class="service"><p class="mono" style="color:var(--madder)">03</p><h3><a href="/birthday-banners">Hand painted birthday banners</a></h3>
+      <p>Custom birthday banners painted with the name, the age and the party colors. Made to hang at the celebration and keep afterwards.</p>
+      <ul class="dots"><li>First birthday banners</li><li>30th, 40th and 50th birthday banners</li><li>Kids' party and theme banners</li><li>Shower and celebration banners</li></ul>
+      <a class="more" href="/birthday-banners">Birthday banners &rarr;</a></article>
+  </div>
+</div></section>
+
+<section id="work" class="block" aria-labelledby="work-title"><div class="wrap">
+  <div class="feature">
+    <figure><img src="assets/custom-watercolor-40th-birthday-crest.jpg" width="720" height="960" fetchpriority="high" alt="Framed custom watercolor for a 40th birthday: a BEK monogram crest in a laurel wreath, 1986, Wendell NC, an NC State pennant and wolf, a cross, and hand lettered happy 40th birthday"><figcaption class="mono">Watercolor and ink · framed in gold</figcaption></figure>
+    <div class="copy"><p class="mono kicker">Recent commission</p><h2 id="work-title">A 40th birthday, painted as a life in objects</h2>
+      <p>For a 40th birthday, one sheet holds the things that make up a person: a monogram crest in a laurel wreath, the birth year, a hometown lettered in copper, a college pennant and mascot, faith, and the small symbols only family would recognize.</p>
+      <p>Every custom watercolor starts this way, from a list of details you send.</p>
+      <dl class="spec mono"><dt>Occasion</dt><dd>40th birthday</dd><dt>Includes</dt><dd>Crest, year, hometown, lettering</dd><dt>Medium</dt><dd>Watercolor and ink on paper</dd></dl>
+      <div class="ctas" style="margin-top:4px"><a class="btn" href="/commission?type=watercolor">Commission one like this</a></div></div>
+  </div>
+  <div class="head" style="margin:clamp(56px,8vw,96px) 0 28px"><h2 style="font-size:clamp(28px,3.4vw,40px)">More work</h2>
+  <p>New watercolors, lettering and banners are added as they are finished. Current work is on <a href="https://www.instagram.com/powerspartyofsix/" target="_blank" rel="noopener">Instagram</a>.</p></div>
+  <div class="gallery" style="grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:clamp(16px,2.5vw,28px)"><figure style="margin:0;display:grid;gap:10px"><img src="assets/custom-watercolor-monogram-crest-keepsake-slw.jpg" width="1000" height="1187" loading="lazy" alt="Framed custom watercolor keepsake with an SLW monogram crest surrounded by painted favorites: a Pepsi can, a VW badge, a cinnamon roll, a horseshoe, a Red Man pouch, a cup of coffee and the Massey Ferguson tractor logo" style="width:100%;aspect-ratio:4/5;object-fit:cover"><figcaption class="mono" style="color:var(--muted);font-size:11px">Custom keepsake · SLW monogram crest</figcaption></figure><figure style="margin:0;display:grid;gap:10px"><img src="assets/watercolor-orange-branch-a-taste-of-home.jpg" width="1000" height="1188" loading="lazy" alt="Watercolor painting of two oranges on a leafy branch, hand lettered a taste of home" style="width:100%;aspect-ratio:4/5;object-fit:cover"><figcaption class="mono" style="color:var(--muted);font-size:11px">Botanical watercolor · "a taste of home"</figcaption></figure><figure style="margin:0;display:grid;gap:10px"><img src="assets/hand-painted-graduation-banner-congrats-auburn.jpg" width="1000" height="750" loading="lazy" alt="Hand painted graduation banner on kraft paper showing Samford Hall at Auburn University, an oak tree, cows on a hill and the AU logo, lettered congrats, Don in orange" style="width:100%;aspect-ratio:4/5;object-fit:cover"><figcaption class="mono" style="color:var(--muted);font-size:11px">Graduation banner · congrats, Don</figcaption></figure><figure style="margin:0;display:grid;gap:10px"><img src="assets/hand-lettered-chalkboard-art-restaurant-fall-menu.jpg" width="1200" height="900" loading="lazy" alt="Hand lettered chalkboard art for a restaurant community board: fall never tasted so good in orange and gold brush script, a cow roasting a marshmallow over a campfire for a s'mores milkshake, and a chicken and waffles sandwich" style="width:100%;aspect-ratio:4/5;object-fit:cover"><figcaption class="mono" style="color:var(--muted);font-size:11px">Chalkboard art · restaurant fall menu board</figcaption></figure></div>
+  <div class="ctas"><a class="btn ghost" href="https://www.instagram.com/powerspartyofsix/" target="_blank" rel="noopener">More on Instagram</a></div>
+</div></section>
+
+<div class="band pattern" role="presentation"></div>
+
+<section id="process" class="block" aria-labelledby="process-title"><div class="wrap">
+  <div class="head"><p class="mono kicker">How a commission works</p><h2 id="process-title">From your list of details to a finished piece</h2></div>
+  <ol class="steps">
+    <li><h3>Fill out the intake</h3><p>The occasion, who it is for, what to include, the size, your budget and deadline.</p></li>
+    <li><h3>Quote and plan</h3><p>Bailey replies with a price, timing and how the piece will come together.</p></li>
+    <li><h3>Painted by hand</h3><p>Watercolor, lettering and banners are all painted by hand, one at a time.</p></li>
+    <li><h3>Ready to give</h3><p>Your piece is finished in time for the day, ready to frame, hang or wrap.</p></li>
+  </ol>
+</div></section>
+
+<section id="faq" class="block" aria-labelledby="faq-title"><div class="wrap">
+  <div class="head"><p class="mono kicker">Questions</p><h2 id="faq-title">Custom watercolor and banner FAQ</h2></div>
+  <div class="faq"><details open><summary>How do I order a custom watercolor painting?</summary><p>Fill out the commission intake form at chintzcreative.com/commission, or send a DM on Instagram to @powerspartyofsix. Include the occasion, who it is for, the details to paint, the size and your deadline. Bailey replies with a quote and timing before any painting starts.</p></details>
+<details><summary>What can be included in a custom watercolor?</summary><p>Anything that tells the person's story: names, initials or a monogram crest, a birth year, a hometown, a school or team, faith symbols, pets, favorite places and objects. Each piece is designed around the details you send.</p></details>
+<details><summary>Do you make hand painted birthday banners?</summary><p>Yes. Chintz Creative paints custom birthday banners by hand with the name, age and party colors, for first birthdays through milestone 30th, 40th and 50th birthdays.</p></details>
+<details><summary>Do you offer hand lettering for weddings and events?</summary><p>Yes. Hand lettering is available for wedding welcome signs, menus, seating charts, place cards, framed quotes, verses and gift pieces.</p></details>
+<details><summary>How much does a custom watercolor cost?</summary><p>Price depends on size, level of detail and whether lettering is included. The intake form has a budget question so Bailey can suggest a piece that fits.</p></details>
+<details><summary>Why is the studio called Chintz Creative?</summary><p>Chintz was originally hand painted cotton from India's Coromandel Coast, so prized that France banned it in 1686 and England in 1720. The name reclaims that older meaning: bright, many colored and made by hand.</p></details></div>
+</div></section>
+
+<section id="on-chintz" class="block" aria-labelledby="chintz-title"><div class="wrap">
+  <div class="head"><p class="mono kicker">On chintz</p><h2 id="chintz-title">A word that went from priceless to insult, and is owed better.</h2>
+  <p>Chintzy now means cheap, stingy, a little tatty. It did not start there. The history of the word is the reason this studio carries it.</p></div>
+  <div class="history">
+    <article><p class="mono">1600s · the word</p><h3><em>Chīṁṭ</em>: spotted, bright</h3><p>The name comes from the Hindi <em>chīṁṭ</em>, spotted or variegated, by way of the Sanskrit <em>chitra</em>, bright and many coloured. English borrowed the plural, <em>chints</em>, mistook it for a singular, and by the late eighteenth century was spelling it chintz.</p></article>
+    <article><p class="mono">1600 to 1800 · the craft</p><h3>Months of work for one length</h3><p>On the Coromandel Coast the cloth was drawn by hand with a kalam pen, painted with mordants and wax resists, then dyed in a fixed order and washed between every bath. Madder, indigo and chay root gave colours that would not fade.</p></article>
+    <article><p class="mono">1686 and 1720 · banned</p><h3>Too good to be allowed</h3><p>European mills could not match it, so their governments outlawed it. France barred chintz imports in 1686. In 1720 Parliament forbade its use in apparel or "in or about any Bed, Chair, Cushion or other Household furniture."</p></article>
+    <article><p class="mono">Now · the challenge</p><h3>Back to the older meaning</h3><p>The work here takes the word at its origin: bright, many coloured, drawn by hand, made slowly and meant to last. Chintz Creative is a small argument that the name is worth reclaiming, one painting at a time.</p></article>
+  </div>
+</div></section>
+<section class="block pattern" style="border-bottom:none"><div class="wrap"><div class="panel" style="margin:0 auto;text-align:center;justify-items:center">
+<p class="mono kicker">Commission a piece</p><h2>Tell Bailey what you have in mind</h2><p style="max-width:48ch">The intake form takes about five minutes. It asks for everything Bailey needs to quote your piece, so there is no back and forth before she can start.</p>
+<div class="ctas" style="margin-top:6px;justify-content:center"><a class="btn" href="/commission">Start the intake form</a><a class="btn ghost" href="https://www.instagram.com/powerspartyofsix/" target="_blank" rel="noopener">DM on Instagram</a></div></div></div></section>
+</main>
+<footer>
+  <div class="wrap">
+    <div style="display:grid;gap:12px;align-content:start">
+      <a class="brand" href="/">chintz <em>creative</em></a>
+      <p style="font-size:16px;max-width:32ch">Custom watercolors, hand lettering and hand painted birthday banners by Bailey Powers.</p>
+    </div>
+    <div>
+      <p class="mono">Commissions</p>
+      <ul>
+        <li><a href="/custom-watercolor">Custom watercolor paintings</a></li>
+        <li><a href="/hand-lettering">Hand lettering and wedding signs</a></li>
+        <li><a href="/birthday-banners">Hand painted birthday banners</a></li>
+        <li><a href="/hand-painted-gifts">Hand painted gifts</a></li>
+        <li><a href="/commission">Start a commission</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="mono">Contact</p>
+      <ul>
+        <li><a href="https://www.instagram.com/powerspartyofsix/" target="_blank" rel="noopener">Instagram @powerspartyofsix</a></li>
+        <li><a href="mailto:mrs.baileypowers@gmail.com">mrs.baileypowers@gmail.com</a></li>
+      </ul>
+    </div>
+    <div class="dial" style="flex-direction:column;align-items:flex-start;gap:10px">
+      <p class="mono">Colourway</p>
+      <div data-colourways></div>
+      <p class="mono" data-colourway-name>Ivory ground</p>
+    </div>
+  </div>
+</footer>
 </body>
 </html>
