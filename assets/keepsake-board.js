@@ -42,7 +42,7 @@
 
   var paper = document.getElementById('kb-paper');
   if (!paper) return;
-  var S = { size: 'letter', frame: 'gold', delivery: 'pickup', items: [], sel: null, notice: null };
+  var S = { size: 'letter', frame: 'none', delivery: 'pickup', items: [], sel: null, notice: null };
   var uid = 0;
 
   function $(id) { return document.getElementById(id); }
@@ -157,6 +157,12 @@
     mat.style.cssText = 'left:' + (mx / s.w * 100) + '%;right:' + (mx / s.w * 100) + '%;top:' + (my / s.h * 100) + '%;bottom:' + (my / s.h * 100) + '%';
     mat.innerHTML = '<span>' + s.label + ' in paper · mat window ' + s.win[0] + ' × ' + s.win[1] + '</span>';
     paper.appendChild(mat);
+    if (!S.items.length) {
+      var empty = document.createElement('p');
+      empty.className = 'kb-empty';
+      empty.textContent = 'Upload photos or add a date to start your keepsake.';
+      paper.appendChild(empty);
+    }
     S.items.forEach(function (it) {
       var el = document.createElement('div');
       var pw = it.d / s.w * 100, ph = it.d / s.h * 100;
@@ -210,6 +216,7 @@
         note.appendChild(up);
       }
     }
+    $('kb-reset').hidden = S.items.length > 0; // the example would replace the customer's work
     $('kb-send').classList.toggle('is-off', !fits());
     $('kb-send').setAttribute('aria-disabled', !fits());
 
@@ -534,14 +541,42 @@
     if (it) resize(it, parseFloat(e.target.value));
     $('kb-sel-size').focus();
   };
-  $('kb-upload').onchange = function (e) {
-    for (var i = 0; i < e.target.files.length; i++) {
-      var f = e.target.files[i];
-      var name = f.name.replace(/\.[^.]+$/, '').replace(/[_-]+/g, ' ').slice(0, 28) || 'Photo';
-      if (!add(name, URL.createObjectURL(f), f)) break;
+  // Name an item from its file: camera names (IMG_4821, PXL_2026..., DSC01234)
+  // become "Photo 4", anything else is tidied into title case.
+  function nameFor(file) {
+    var base = file.name.replace(/\.[^.]+$/, '');
+    if (/^\d{1,4}$/.test(base)) return base; // a year like 1986
+    if (/^(img|image|dsc|dscn|pxl|photo|screenshot|pic|mvimg|dji)?[\s_-]*\d[\d\s_-]*/i.test(base) && !/[a-z]{3,}/i.test(base.replace(/^(img|image|dsc|dscn|pxl|photo|screenshot|pic|mvimg|dji)/i, ''))) {
+      return 'Photo ' + (S.items.length + 1);
     }
+    return base.replace(/[_-]+/g, ' ').replace(/\s+/g, ' ').trim().slice(0, 28)
+      .replace(/\b([a-z])/g, function (c) { return c.toUpperCase(); }) || 'Photo ' + (S.items.length + 1);
+  }
+
+  // Add photos one at a time, skipping any the browser cannot open (for
+  // example iPhone HEIC photos in some desktop browsers).
+  $('kb-upload').onchange = function (e) {
+    var files = Array.prototype.slice.call(e.target.files);
+    var skipped = [];
     e.target.value = '';
-    render();
+    files.reduce(function (chain, f) {
+      return chain.then(function (keepGoing) {
+        if (!keepGoing) return false;
+        var src = URL.createObjectURL(f);
+        return loadImage(src).then(function () {
+          return add(nameFor(f), src, f);
+        }, function () {
+          URL.revokeObjectURL(src);
+          skipped.push(f.name);
+          return true;
+        });
+      });
+    }, Promise.resolve(true)).then(function () {
+      if (skipped.length && !S.notice) {
+        S.notice = { text: 'Couldn\u2019t open ' + skipped.join(', ') + '. Save ' + (skipped.length > 1 ? 'them' : 'it') + ' as a JPEG or PNG and upload again. On iPhone, sharing or screenshotting the photo works.', next: null };
+      }
+      render();
+    });
   };
   $('kb-add-text').onclick = function () { if (add('Date or words', null)) render(); };
   $('kb-reset').onclick = loadExample;
@@ -551,7 +586,10 @@
   $('kb-size-table').innerHTML = CONFIG.sizes.map(function (s) {
     return '<tr><td>' + s.label + ' in</td><td>' + s.win[0] + ' × ' + s.win[1] + ' in</td><td>' + s.frame + ' in</td><td>' + money(s.base) + '</td><td>' + s.included + '</td><td>' + s.max + '</td><td>+' + money(s.frameAdd) + '</td></tr>';
   }).join('');
+  $('kb-frame-table').innerHTML = CONFIG.sizes.map(function (s) {
+    return '<tr><td>' + s.label + ' in</td><td>' + s.frame + ' in, white mat</td><td>Wood, gold or black</td><td>+' + money(s.frameAdd) + '</td></tr>';
+  }).join('');
   $('kb-extra-fee').textContent = money(CONFIG.extraItemFee);
 
-  loadExample();
+  render();
 })();

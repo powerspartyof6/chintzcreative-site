@@ -1,5 +1,4 @@
 /* keepsake board: builds on site.css tokens and the .intake shell */
-.kb-draft{margin-top:18px;color:var(--madder);font-size:11px}
 .kb{max-width:none}
 .kb-sizes{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--rule2)}
 .kb-sizes button{font:inherit;background:transparent;color:var(--ink);border:0;border-right:1px solid var(--rule);padding:14px clamp(8px,2vw,20px);cursor:pointer;display:grid;gap:2px;text-align:left}
@@ -16,8 +15,10 @@
 .kb-stage,.kb-side{display:grid;gap:16px;align-content:start;min-width:0}
 .kb-side{gap:24px}
 .kb-table{background:var(--cream);border:1px solid var(--rule);padding:clamp(16px,3vw,36px) clamp(16px,3vw,36px) clamp(30px,4vw,44px);display:flex;justify-content:center}
-.kb-paper{position:relative;width:100%;max-width:100%;background-color:#FBF7EE;touch-action:none;box-shadow:0 1px 2px rgba(0,0,0,.14),0 18px 34px -16px rgba(31,74,62,.5);
+.kb-paper{position:relative;width:100%;max-width:100%;background-color:#FBF7EE;box-shadow:0 1px 2px rgba(0,0,0,.14),0 18px 34px -16px rgba(31,74,62,.5);
   background-image:radial-gradient(circle at 20% 30%,rgba(120,100,60,.06) 0 1px,transparent 1.5px),radial-gradient(circle at 70% 60%,rgba(120,100,60,.05) 0 1px,transparent 1.5px);background-size:7px 7px,11px 11px}
+.kb-piece{touch-action:none}
+.kb-empty{position:absolute;left:12%;right:12%;top:50%;transform:translateY(-50%);margin:0;text-align:center;font-family:'Instrument Serif',serif;font-style:italic;font-size:clamp(20px,2.6vw,28px);line-height:1.2;color:rgba(30,44,36,.55)}
 .kb-mat{position:absolute;border:1px dashed rgba(30,44,36,.35);pointer-events:none}
 .kb-mat span{position:absolute;left:50%;transform:translateX(-50%);bottom:-30px;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
 .kb-piece{position:absolute;aspect-ratio:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;cursor:grab;user-select:none;-webkit-user-select:none}
@@ -36,6 +37,7 @@
 .kb-pips i.ex{background:var(--madder);border-color:var(--madder)}
 .kb-notice{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;padding:14px 16px;background:var(--cream);border:1px solid var(--rule2);border-left:3px solid var(--madder);font-size:16px}
 .kb-notice[hidden]{display:none}
+.kb-add [hidden]{display:none}
 .kb-add{display:flex;flex-wrap:wrap;gap:10px}
 .kb-hint{color:var(--muted);font-size:15px}
 .kb-items{list-style:none;margin:0;padding:0;border-top:1px solid var(--rule2)}
