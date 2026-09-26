@@ -17,13 +17,13 @@ Static site, plain HTML. No build step and no runtime, so every word is readable
 
 Delete support.js and any older .html files from the repo before pushing.
 
-## Deploy (Cloudflare Pages)
-Preset **None**, no build command, output directory `/`. Clean URLs (/hand-lettering) work automatically.
+## Deploy (GitHub Pages)
+The site is served by GitHub Pages from the `main` branch root, with `CNAME` set to chintzcreative.com. Pushing to `main` publishes in about a minute; `gh run list -R powerspartyof6/chintzcreative-site` shows the build. Clean URLs (/hand-lettering) work automatically.
 
 ## Contact form (FormSubmit, free)
-1. After deploying, submit the form once yourself. FormSubmit emails mrs.baileypowers@gmail.com an activation link. Click it.
-2. Optional: FormSubmit then provides a random alias address. Swap it into the form `action` in commission.html to hide the real email from spam bots.
-3. Visitors land on /thanks after sending and receive an automatic confirmation email.
+Both forms (commission.html and the keepsake board in assets/keepsake-board.js) post to FormSubmit's alias for Bailey's inbox, `7c083d32d7c3ea50db79b9ebee649585`, so her address is not in the site code. Her email is not shown anywhere on the site: people reach her through the forms or Instagram DM.
+1. FormSubmit activates each web address separately. After a form first goes live, submit it once yourself and click the activation link that arrives in Bailey's inbox. A submission held for activation arrives without attachments.
+2. Visitors land on /thanks after sending. FormSubmit's automatic confirmation email only works with its captcha turned on; both forms have it off (`_captcha` false), so visitors get no confirmation email.
 
 ## Un-hiding Interior design
 Add `<a href="/interior-design">Interiors</a>` back to the header nav and footer of each page, change its robots meta to `index, follow`, add it to sitemap.xml and llms.txt, and restore the "Interior design" choice in commission.html.
@@ -70,6 +70,7 @@ Check the 16 × 20 and 22 × 28 prices in the Raleigh or Knightdale stores. Buy 
 **FormSubmit activation:** FormSubmit activates each web address separately. After this page first goes live, send one test board from chintzcreative.com/keepsake-board and click the activation link in Bailey's inbox. A board held for activation arrives without its attachments, so send the test again after activating.
 
 **Open questions:**
-- Tiny accents (trees, drumsticks) count as items today, so the 1986 · BEK piece would be 9 items and need 11 × 14. They could be made free like the flourishes.
-- Dates and short words count as items. They could be free lettering instead.
+**Decided:** anything the customer asks for counts as an item, including dates, words and small accents like trees or drumsticks. Decorations Bailey adds on her own (sparkles, laurels, one lettered line) are free.
+
+**Notes:**
 - `example_photos/` (local only, git-ignored) holds cropped sample emblems for testing uploads. They are team and car logos, so they are not published.

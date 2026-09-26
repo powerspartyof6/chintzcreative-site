@@ -359,7 +359,7 @@
   // from its file inputs (10 MB total). The board builds that form on the fly:
   // text fields for the order, one file input for a picture of the layout and
   // one per uploaded photo, shrunk to JPEG so the total stays well under 10 MB.
-  var FORM_ACTION = 'https://formsubmit.co/mrs.baileypowers@gmail.com';
+  var FORM_ACTION = 'https://formsubmit.co/7c083d32d7c3ea50db79b9ebee649585'; // FormSubmit alias for Bailey's inbox
   var MAX_BYTES = 9 * 1024 * 1024;
 
   function photos() { return S.items.filter(function (it) { return it.file; }); }
@@ -532,7 +532,7 @@
       f.submit();
     }).catch(function () {
       btn.disabled = false;
-      status.textContent = 'The photos are too large to send together. Remove a few or send them by email.';
+      status.textContent = 'The photos are too large to send together. Remove a few, send the board, then DM the rest to Bailey on Instagram.';
     });
   }
 

@@ -86,3 +86,5 @@
 .kb-send{margin-top:clamp(28px,4vw,44px);max-width:none}
 .kb-send .nav{align-items:center}
 #kb-status{text-transform:none;letter-spacing:.04em;font-size:12px}
+.kb-alt{margin-top:22px;font-size:11px;color:var(--muted)}
+.kb-alt a{white-space:nowrap}
