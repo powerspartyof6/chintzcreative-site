@@ -80,6 +80,7 @@
       <a href="/hand-lettering">Lettering</a>
       <a href="/birthday-banners">Banners</a>
       <a href="/hand-painted-gifts">Gifts</a>
+      <a href="/window-painting">Windows</a>
       <a href="/#faq">FAQ</a>
       <a href="/#on-chintz">On chintz</a>
     </nav>
@@ -117,7 +118,8 @@
       <label class="choice"><input type="radio" name="project_type" value="Hand lettering"><strong>Hand lettering</strong><span>Quotes, verses, chalkboards and framed pieces</span></label>
       <label class="choice"><input type="radio" name="project_type" value="Banner"><strong>Banner</strong><span>Birthday, graduation or shower, painted by hand</span></label>
       <label class="choice"><input type="radio" name="project_type" value="Wedding signage"><strong>Wedding signage</strong><span>Welcome signs, menus, seating charts, place cards</span></label>
-      <label class="choice"><input type="radio" name="project_type" value="Painted gifts"><strong>Painted gifts</strong><span>Ornaments, cutting boards, paddles, notebooks</span></label><label class="choice"><input type="radio" name="project_type" value="Something else"><strong>Something else</strong><span>Events or an idea of your own</span></label>
+      <label class="choice"><input type="radio" name="project_type" value="Painted gifts"><strong>Painted gifts</strong><span>Ornaments, cutting boards, paddles, notebooks</span></label>
+      <label class="choice"><input type="radio" name="project_type" value="Window painting"><strong>Window painting</strong><span>Storefront, holiday and seasonal windows for your business</span></label><label class="choice"><input type="radio" name="project_type" value="Something else"><strong>Something else</strong><span>Events or an idea of your own</span></label>
     </div>
     <fieldset class="chips"><legend class="field"><span>The occasion</span></legend>
       <label class="chip"><input type="radio" name="occasion" value="Birthday"><span>Birthday</span></label><label class="chip"><input type="radio" name="occasion" value="Milestone birthday"><span>Milestone birthday</span></label><label class="chip"><input type="radio" name="occasion" value="Wedding"><span>Wedding</span></label><label class="chip"><input type="radio" name="occasion" value="Anniversary"><span>Anniversary</span></label><label class="chip"><input type="radio" name="occasion" value="Baby or shower"><span>Baby or shower</span></label><label class="chip"><input type="radio" name="occasion" value="Graduation"><span>Graduation</span></label><label class="chip"><input type="radio" name="occasion" value="Holiday"><span>Holiday</span></label><label class="chip"><input type="radio" name="occasion" value="Memorial"><span>Memorial</span></label><label class="chip"><input type="radio" name="occasion" value="Just because"><span>Just because</span></label>
@@ -156,6 +158,13 @@
       <div class="row"><label class="field"><span>Guest count</span><input type="number" name="ws_guests" min="1" placeholder="e.g. 120" data-label="Guest count"></label><label class="field"><span>Palette or style</span><input type="text" name="ws_palette" placeholder="e.g. Sage and cream, garden, classic" data-label="Palette"></label></div>
     </div>
 
+    <div class="branch" data-for="Window painting" hidden>
+      <div class="row"><label class="field"><span class="req">Business name</span><input type="text" name="wp_business" placeholder="As it appears on the storefront" data-label="Business name" autocomplete="organization" required></label><label class="field"><span class="req">Address of the windows</span><input type="text" name="wp_address" placeholder="Street, city" data-label="Window address" required></label></div>
+      <div class="row"><label class="field"><span class="req">How many windows?</span><input type="number" name="wp_windows" min="1" placeholder="e.g. 4" data-label="Number of windows" required></label><label class="field"><span>Rough size of each</span><input type="text" name="wp_size" placeholder="e.g. 4 ft wide by 6 ft tall" data-label="Window size"></label></div>
+      <fieldset class="chips"><legend class="field"><span>Occasion</span></legend><label class="chip"><input type="radio" name="wp_occasion" value="Christmas and winter"><span>Christmas and winter</span></label><label class="chip"><input type="radio" name="wp_occasion" value="Fall"><span>Fall</span></label><label class="chip"><input type="radio" name="wp_occasion" value="Spring or summer"><span>Spring or summer</span></label><label class="chip"><input type="radio" name="wp_occasion" value="Grand opening or event"><span>Grand opening or event</span></label><label class="chip"><input type="radio" name="wp_occasion" value="Promotion"><span>Promotion</span></label><label class="chip"><input type="radio" name="wp_occasion" value="Other"><span>Other</span></label></fieldset>
+      <label class="field"><span class="req">Message and design ideas</span><textarea name="wp_design" rows="4" placeholder="Wording, colors, characters or a logo to include" data-label="Message and design" required></textarea></label>
+      <div class="row"><label class="field"><span>Paint on</span><select name="wp_side" data-label="Paint on"><option value="">Choose one</option><option>Outside of the glass</option><option>Inside of the glass</option><option>Not sure</option></select></label><label class="field"><span>Removal later?</span><select name="wp_removal" data-label="Removal"><option value="">Choose one</option><option>Yes, include removal</option><option>No, we will remove it</option><option>Not sure</option></select></label></div>
+    </div>
     <div class="branch" data-for="Painted gifts" hidden>
       <fieldset class="chips"><legend class="field"><span class="req">What pieces?</span></legend><label class="chip"><input type="checkbox" name="gf_pieces" value="Christmas ornaments"><span>Christmas ornaments</span></label><label class="chip"><input type="checkbox" name="gf_pieces" value="NC state ornaments"><span>NC state ornaments</span></label><label class="chip"><input type="checkbox" name="gf_pieces" value="Cutting boards"><span>Cutting boards</span></label><label class="chip"><input type="checkbox" name="gf_pieces" value="Paddles"><span>Paddles</span></label><label class="chip"><input type="checkbox" name="gf_pieces" value="Notebooks"><span>Notebooks</span></label><label class="chip"><input type="checkbox" name="gf_pieces" value="Other"><span>Other</span></label></fieldset>
       <div class="row"><label class="field"><span class="req">How many?</span><input type="number" name="gf_quantity" min="1" placeholder="e.g. 12" data-label="Quantity" required></label><label class="field"><span>Colors or school</span><input type="text" name="gf_colors" placeholder="e.g. Pink gingham, NC State red" data-label="Colors"></label></div>
@@ -222,6 +231,7 @@
         <li><a href="/hand-lettering">Hand lettering and wedding signs</a></li>
         <li><a href="/birthday-banners">Hand painted birthday banners</a></li>
         <li><a href="/hand-painted-gifts">Hand painted gifts</a></li>
+        <li><a href="/window-painting">Storefront window painting</a></li>
         <li><a href="/commission">Start a commission</a></li>
       </ul>
     </div>

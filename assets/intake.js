@@ -107,7 +107,7 @@
       });
     }
     if (q) {
-      var map = { watercolor: 'Custom watercolor', lettering: 'Hand lettering', banner: 'Banner', gifts: 'Painted gifts', wedding: 'Wedding signage', interior: 'Interior design', other: 'Something else' };
+      var map = { watercolor: 'Custom watercolor', lettering: 'Hand lettering', banner: 'Banner', gifts: 'Painted gifts', window: 'Window painting', wedding: 'Wedding signage', interior: 'Interior design', other: 'Something else' };
       var r = form.querySelector('input[name="project_type"][value="' + (map[q] || q) + '"]');
       if (r) r.checked = true;
     }
